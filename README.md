@@ -1,9 +1,9 @@
 # Project Title
-Your project's title
+Ronald McDonald House CHARITIES {NPO}
 
 ## Student Information
-**Student number:** Your student number <br>
-**Student Name:** Your full name
+**Student number:** ST10507551 <br>
+**Student Name:** RAISIBE CHANTELL APHANE
 
 ## Project Overview
 
