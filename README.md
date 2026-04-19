@@ -42,7 +42,7 @@ Key performance - focuses on growth, quality and impact on finances
 
 ## Sitemap
 
-![Website Sitemap](img/mysitemap.png) <br> (The one here is only an example, include your own site map)
+![Website Sitemap] <br> (The one here is only an example, include your own site map)
 
 ## References
 
