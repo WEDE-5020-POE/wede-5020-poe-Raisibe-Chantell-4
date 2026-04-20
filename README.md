@@ -6,9 +6,7 @@ Ronald McDonald House CHARITIES {NPO}
 **Student Name:** RAISIBE CHANTELL APHANE
 
 ## Project Overview
-Brief history: Since 2012 Ronald McDonald house charities South Africa has been a home away from medical treatment. We provide safe and supportive space where families can rest, share meals and stay close to the care their children need. Our work goes beyond accommodation; we focus more on building a caring community that causes the emotional and financial pressure of having a child in hospital. 
-
-Mission: We create and support programs that directly improve the health and well-being of children and their famillies  
+Brief history: Since 1994 ,RMHC SA's core mission has been to keep families near their hospitalised children(RMHC SOUTH AFRICA, 2024). iN 2025. OVER 1,200 families were supported across the country(RMHC SOUTH AFRICA,2024b).
 
 Vision: A world where every child has access to medical care, and every family feels supported and involved in their childcare. 
 
@@ -45,5 +43,14 @@ Key performance - focuses on growth, quality and impact on finances
 ![Website Sitemap] ![my site map](<img/Mysite map.png>)() <br> (The one here is only an example, include your own site map)
 
 ## Referece
-Home - RMHC SOUTH AFRICA,2024, Homepage.[ONLINE]. Available at https://rmhcsouthafrica.org/ > [ACCESSED 7 APRIL 2026]
-
+ RMHC SOUTH AFRICA,2024, Homepage.[ONLINE]. Available at https://rmhcsouthafrica.org/ > [ACCESSED 7 APRIL 2026]
+In-text: (RMHC South Africa, 2024) 
+RMHC South Africa, 2024. About Us. Available at: <rmhc.org.za> [Accessed 20 April 2026].2. Social Media - Facebook Post 
+In-text: (RMHC South Africa, 2026a) 
+RMHC South Africa, 2026a. *_ 8 April. Available at: <facebook.com> [Accessed 20 April 2026].3. Social Media - LinkedIn Stats 
+In-text: (RMHC South Africa, 2026b)
+RMHC South Africa, 2026b. 2025 Impact Update. January. Available at: <linkedin.com> [Accessed 20 April 2026].[online][Facebook][LinkedIn]4. Public Domain Image - Unsplash
+In-text:(RMHC SOUTH AFRICA, 2026c)
+Mwangi, J., 2023. Family holding hands in hospital. [image online] Available at: <unsplash.com> [Accessed 20 April 2026].
+The Noun Project, 2022. House icon by A. Designer. [icon online] Available at: <thenounproject.com> [Accessed 20 April 2026].
+South African Government, n.d. Children’s Act 38 of 2005. Available at: <gov.za> [Accessed 20 April 2026].
