@@ -8,16 +8,14 @@
 # Mark images and other binary files
 *.png  binary
 *.jpg  binary
-*.gif  binary
-*.ico  binary
-*.svg  text
+
 
 # Prevent merge conflicts in minified files (treat as binary)
-*.min.js binary
-*.min.css binary
+*.min.HTML binary
+
 
 # Optional: enforce UTF-8 encoding for HTML
-*.html =UTF-8
+*=UTF-8
 ect text files and perform LF normalization
 * text=auto
 
