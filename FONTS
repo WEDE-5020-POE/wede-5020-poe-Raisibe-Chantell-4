@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RMHC SA - Style Guide</title>
+    <!-- Fonts: Google Fonts Open Sans + Poppins (Google Fonts, 2024) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <!-- Icons: Font Awesome Free (Font Awesome, 2024) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    
+</head>
+<body>
+    <h1>RMHC South Africa Style Guide</h1>
+    <p>This page documents all fonts, colours, and icons used in this project for marking purposes.</p>
+
+    <h2>1. Colours</h2>
+    <!-- Brand colours from rmhc.org.za (RMHC South Africa, 2024) -->
+    <div class="swatch red"></div> <p>RMHC Red: #DA291C</p>
+    <div class="swatch yellow"></div> <p>RMHC Yellow: #FFC72C</p>
+
+    <h2>2. Typography</h2>
+    <!-- Fonts: Google Fonts, Open Font Licence (Google Fonts, 2024) -->
+    <h3 style="font-family: 'Poppins', sans-serif;">Poppins Bold - Headings</h3>
+    <p style="font-family: 'Open Sans', sans-serif;">Open Sans Regular - This is body text. Used for all paragraphs and buttons for readability.</p>
+
+    <h2>3. Icons</h2>
+    <!-- Icons: Font Awesome Free + The Noun Project (Font Awesome, 2024; The Noun Project, 2022) -->
+    <p><i class="fa-solid fa-house"></i> fa-house - Used on "Our Houses" page</p>
+    <p><i class="fa-solid fa-heart"></i> fa-heart - Used on Home + Donate pages</p>
+    <p><i class="fa-solid fa-hand-holding-heart"></i> fa-hand-holding-heart - Used on Get Involved page</p>
+
+    
+</body>
+</html>
