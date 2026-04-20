@@ -1,18 +1,23 @@
-# CHANGELOG
+# CHANGELOG - RMHC Website project
 
 All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
-## [1.0.0] 
+## [1.2] -2026-04-20
 ### Added
-- xyz
-
+-created donate page with R250/R500/R1000 donation tiers
+-Added unsplashed family image to home hero page (Mwangi, 2023)
+### Added -2026-04-12
+-wire frames
+### Added -2026-04-03
+-crated reference list with 8 sources in Harvard style
 ### Changed
-- xyz
+-Rewrote About us paragraph to paraprase RMHC mission (RMHC SOUTH AFRICA , 2024)
 
 ### Fixed
-- xyz
+-Corrected broken link on Contact page to google map
+-Fixed in-textcitation format from (RMHC, 2024) to(RMHC SOUTH AFRICA, 2024)
 
 ## Semantic Versioning
 
@@ -22,32 +27,3 @@ Example: 2.1.3
 - MAJOR → Breaking changes (1.0.0 → 2.0.0)  
 - MINOR → New features (1.0.0 → 1.1.0)  
 - PATCH → Bug fixes / small improvements (1.0.0 → 1.0.1)
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Changelog</title>
-   
-</head>
-<body>
-   <div class="changelog">
-       <h1>Changelog</h1>
-       <div class="version">
-           <h2>Version 1.2.4 - March 15, 2017</h2>
-           <ul>
-               <li><strong>Added:</strong> New feature for user authentication.</li>
-               <li><strong>Changed:</strong> Updated UI for better accessibility.</li>
-               <li><strong>Fixed:</strong> Resolved issue with data synchronization.</li>
-           </ul>
-       </div>
-       <div class="version">
-           <h2>Version 1.2.3 - March 14, 2017</h2>
-           <ul>
-               <li><strong>Added:</strong> Support for exporting reports.</li>
-               <li><strong>Fixed:</strong> Minor bug fixes in the dashboard.</li>
-           </ul>
-       </div>
-   </div>
-</body>
-</html>
