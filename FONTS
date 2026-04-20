@@ -12,12 +12,7 @@
 </head>
 <body>
     <h1>RMHC South Africa Style Guide</h1>
-    <p>This page documents all fonts, colours, and icons used in this project for marking purposes.</p>
-
-    <h2>1. Colours</h2>
-    <!-- Brand colours from rmhc.org.za (RMHC South Africa, 2024) -->
-    <div class="swatch red"></div> <p>RMHC Red: #DA291C</p>
-    <div class="swatch yellow"></div> <p>RMHC Yellow: #FFC72C</p>
+    <p>This page documents all fonts and icons used in this project for marking purposes.</p>
 
     <h2>2. Typography</h2>
     <!-- Fonts: Google Fonts, Open Font Licence (Google Fonts, 2024) -->
