@@ -1,9 +1,6 @@
 # Auto det# Ensure consistent line endings (LF for all text files)
-*.html text eol=lf
-*.css  text eol=lf
-*.js   text eol=lf
-*.json text eol=lf
-*.md   text eol=lf
+*.html text 
+
 
 # Treat HTML as text for diffs (default, but explicit here)
 *.html diff
