@@ -6,24 +6,20 @@ Ronald McDonald House CHARITIES {NPO}
 **Student Name:** RAISIBE CHANTELL APHANE
 
 ## Project Overview
-Brief history: Since 1994 ,RMHC SA's core mission has been to keep families near their hospitalised children(RMHC SOUTH AFRICA, 2024). iN 2025. OVER 1,200 families were supported across the country(RMHC SOUTH AFRICA,2024b).
-
-Vision: A world where every child has access to medical care, and every family feels supported and involved in their childcare. 
-
-Target audience: Children who receive specialized medical treatment 
-
-
+: RMHC SA was established in 2010 and forms part of the global RMHC network founded in 1974. It provides free accommodation and support to families of seriously ill children receiving treatment at state hospitals. RMHC SA currently operates 2 Houses in Johannesburg and Cape Town, having served over 8,000 families since inception
+. Mission: To create, find and support programmes that directly improve the health and well-being of children and their families.
+Vision: A world where all children have access to medical care and their families are supported and actively involved in their children’s care
+. Target audience: Primary: Parents/guardians of hospitalised children needing accommodation near Red Cross, Baragwanath, or Nelson Mandela Children’s Hospital.
+ Secondary: Corporate donors, individual donors, volunteers aged 25-65, and McDonald’s SA customers.
+Tertiary: Hospital social workers who refer families.
+ 
 
 ## Website Goals and Objectives
 
- goal increase of website traffic – to accelerate its mission of supporting families with ill or injuries children  
-
-. generating leads- focuses its lead on generation efforts on securing long-terms supporters, donors and partners to sustain services for families with hospitalized children 
-
-. Provide information- primarily to support families with sick children, educate the public on their mission 
-
-Key performance - focuses on growth, quality and impact on finances 
-
+GOAL-OBJECTIVE-KPI TO MEASURE SUCCESS
+-Increase family applications-Grow online accommodation applications by 30% in 6 monthsof- “Apply for a Room” form submissions
+           -Boost online donations- Raise R100,000 via website donations by Dec 2026-Total ZAR via PayFast donation widget
+           -Recruit Volunteers- Gain 50 new volunteer sign- Volunteer form completions in CRM
 
 
 ## Timeline and Milestones
