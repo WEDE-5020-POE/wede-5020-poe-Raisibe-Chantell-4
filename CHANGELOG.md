@@ -27,3 +27,15 @@ Example: 2.1.3
 - MAJOR → Breaking changes (1.0.0 → 2.0.0)  
 - MINOR → New features (1.0.0 → 1.1.0)  
 - PATCH → Bug fixes / small improvements (1.0.0 → 1.0.1)
+PART 2 FEEDBACK
+### Fixed
+Valid HTML tags only :Removed 
+type="monetary"
+type="comment".Used select and textarea instead
+Matching labels: Added
+method="POST" and <button
+type=submit">.Form can now be submitted
+### ADDED
+Added comments explaining each section and fix
+Sematic html structure with header and main
+
