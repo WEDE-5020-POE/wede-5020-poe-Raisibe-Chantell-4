@@ -8,28 +8,59 @@
 <!-- This is where you enter your personal inforation -->
 
 <h1>Enquiry form</h1>
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="Sname">Surname name:</label><br>
-  <input type="text" id="srname" name="surname" value=""><br>
-  <label for="Email">Email:</label><br>
-  <input type="Email" id="Emal" name="Email" value=""><br>
-  <label for="cdetails">Contact details:</label><br>
-  <input type="Cdetails" id="Contact details" name="Contact details" value=""><br>
- 
-  <label for="Volunteer">Volunteer:</label><br>
-  <input type="monetary" id="moneytary" name="moneytary" value=""><br>
-  <label for="Time">Time:</label><br>
-  <input type="Time" id="Time" name="Time" value=""><br><label for="Comment">Comment:</label><br>
-  <input type="comment" id="comment" name="comment" value=""><br>
+<!-- This is where you enter your personal inforation -->
+<p>Whether it is with a question about our programs or feedback on our site.</p>
+<!-- Form: methods=POST sends data securely -->
+<form action="/action_page.php" method="POST">
 
+  <!-- first name input with correct label-for and id matching -->
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" required><br><br>
+
+  <!-- surname input with correct label-for and id matching -->
+  <label for="surname">Surname:</label><br>
+  <input type="text" id="surname" name="surname" required><br><br>
+
+  <!-- email input with correct label-for and id matching -->
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <!-- phone number input with correct label-for and id matching -->
+  <label for="cdetails">Contact details:</label><br>
+  <input type="text" id="cdetails" name="cdetails" required><br><br>
+
+   <!-- dropdown relaceses invalid type="moneytary" input-->
+  <label for="Volunteer">How would you like to volunteer?</label><br>
+  <select id="Volunteer" name="Volunteer">
+    
+    <!-- options for volunteering -->
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select><br><br>
+  <label for="Time">Time:</label><br>
+  <input type="time" id="Time" name="Time" value=""><br><br>
+
+  <label for="Comment">message:</label><br>
+  <input type="comment" id="comment" name="comment" value=""><br>
+  
+  <!-- submit button to send form data -->
+  <input type="submit" value="Submit">
+
+  <!-- reset button to clear form data -->
+  <input type="reset" value="Reset">
+</form>
+
+  <!-- Footer section with contact information -->
 <footer>
-  <h3>contact us <a href="https://rmhcsouthafrica.org/contact/">tel number</a></h3>
+  <hr>
+  <h3>contact us</h3>
+  <p>contact us <a href="https://rmhcsouthafrica.org/contact/">tel number</a></p>
   <p>FAQ <a href="https://rmhcsouthafrica.org/faq/">FAQ</a></p>
-  <p><a href="rmhcadmin@rmhcsouthafrica.org">rmchadimin@southafrica</a></p>
+  <p><a href="rmhcadmin@rmhcsouthafrica.org">rmhcadmin@southafrica</a></p>
   <p><a href="https://rmhcsouthafrica.org/privacy-policy/">privacypolicy</a></p>
+  
              <!-- social media platforms are also used -->
+  <p>follow us on social media</p>
    <p><a href="https://www.facebook.com/profile.php?id=61577145423066">facebook</a></p>
    <p><a href="https://www.instagram.com/rmhcsouthafrica/">instagram</a></p>
    <p><a href="https://www.youtube.com/channel/UC22h9jaqYZO2PwjFaBDaCFQ">youtube</a></p>
