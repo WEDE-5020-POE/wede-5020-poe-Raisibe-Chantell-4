@@ -2,7 +2,7 @@
 Ronald McDonald House CHARITIES {NPO}
 
 ## Student Information
-**Student number:** ST10507551 <br>
+**Student number:** ST10507551 
 **Student Name:** RAISIBE CHANTELL APHANE
 
 ## Project Overview
