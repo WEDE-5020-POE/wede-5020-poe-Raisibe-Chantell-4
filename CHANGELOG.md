@@ -39,3 +39,19 @@ type=submit">.Form can now be submitted
 Added comments explaining each section and fix
 Sematic html structure with header and main
 
+### [2.0.0]- 2026-05-18
+ ### Changed
+ -fixed navigation structure: moved ul inside nav, corrected link destinations
+ -updated layout to use sematic HTML tags: header, nav, main, section, footer
+ -updated my images
+ ### Added
+ -HTML comments throughout code explaing each section
+ _internal navigation between homepage, about, enquiry, and contact pa
+ -improved links
+
+ ### fixed - 2026-05-20
+ -fixed invalid HTML- REMOVED br and h3 from iside table
+ -corrected table colums 
+ -contact.html structure, donate. html
+ -footer
+ -made user exprience easy
