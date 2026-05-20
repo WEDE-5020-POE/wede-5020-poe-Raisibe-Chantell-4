@@ -2,82 +2,64 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<title>About us</title>
 </head>
 <body>
 
 
-<!-- ABOUT US PAGE -->
-<!-- Mission statement paraphrased from rmhc.org.za/about-us (RMHC South Africa, 2024) -->
-<!-- Stat from RMHC SA LinkedIn, Jan 2026: 1,200+ families (RMHC South Africa, 2026c) -->
-<section class="about">
-    <p>Since 1994, RMHC SA’s core mission has been to keep families near their hospitalised children...</p>
-    <p class="stat">1,200+ families supported in 2025</p>
-</section>
-
-
-<div class="topnav">
-  <a class="active" href="#about RMHC">about rmhc</a>
-  <a class="active" href="https://rmhcsouthafrica.org/our-team/">our team</a>
-  <a class="active" href="https://rmhcsouthafrica.org/our-partners/">our partners</a>
-</div>
-
-<div style="padding-left:16px">
-  <h2>It is more than a place to stay</h2>
-  <p>Since 1994 ,RMHC SA's core mission has been to keep families near their hospitalised children(RMHC SOUTH AFRICA, 2024). iN 2025. OVER 1,200 families were supported across the country(RMHC SOUTH AFRICA,2024b).</p>
-</div>
-
-<div style="padding-left:16px">
-<h3> MISSION</h3>
-  p>Since 1994, RMHC SA’s core mission has been to keep families near their hospitalised children...</p>
-    <p class="stat">1,200+ families supported in 2025</p>
-  <div style="padding-left:16px">
-
-  <h4>Our Vision</h4>
-  <p>A world where every child has access to medical care and every family feels supported and involved in their child’s care.
-Our Values
-We lead with compassion and act with </p>
-
-  </div>
-  
-  <div 
-  <h5>Our values</h5>
-  <p>We lead with compassion and act with integrity. We value diversity and transparency. We build community and create belonging through care and accountability.</p>
-  
-
-  <h2>Volunteer Form</h2>
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
+<!-- tittle and main content -->
+<h1>About RMHC South Africa</h1>
+<!--main content-->
+<main>
+  <!--mession statement-->
+  <section>
+    <h2>our mission</h2>
+    <!--mission statement paraphrased from rmhc.org.za/about-us (RMHC South Africa, 2024) -->
+    <p> since 1994, RMHC SA’s core mission has been to keep families near their hospitalised children...</p>
+  </section>
+  <h2> Volunteer Form</h2>
+  <!-- form uses html5 validation-->
+   <form action="/action_page.php">
+  <label for="fname">First name:</label><br>  
+  <input type="text" id="fname" name="fname" value="" required><br>
   <label for="Sname">Surname name:</label><br>
-  <input type="text" id="srname" name="surname" value=""><br>
-  <label for="Email">Email:</label><br>
-  <input type="Email" id="Emal" name="Email" value=""><br>
+  <input type="text" id="srname" name="surname" value="" required><br>
+  <label for="Email">Email:</label><br> 
+  <input type="email" id="Emal" name="Email" value="" required><br>
   <label for="cdetails">Contact details:</label><br>
-  <input type="Cdetails" id="Contact details" name="Contact details" value=""><br>
- 
+  <input type="text" id="Contact details" name="Contact details" value="" required><br>
   <label for="Volunteer">Volunteer:</label><br>
-  <input type="monetary" id="moneytary" name="moneytary" value=""><br>
+  <input type="text" id="moneytary" name="moneytary" value="" required><br>
   <label for="Time">Time:</label><br>
-  <input type="Time" id="Time" name="Time" value=""><br><label for="Comment">Comment:</label><br>
-  <input type="comment" id="comment" name="comment" value=""><br>
-  
-  
-  
+  <input type="text" id="Time" name="Time" value="" required><br>
+  <label for="Comment">Comment:</label><br>
+  <input type="text" id="Comment" name="Comment" value="" required><br> 
   <br>
   <input type="submit" value="Submit">
-</form> 
+  </section>
+</form>
+</main>
+
+<!--footer with contactand social information-->
 <footer>
-  <h3>contact us <a href="https://rmhcsouthafrica.org/contact/">tel number</a></h3>
+  <hr>
+    <h3>Contact Us</h3>
+    <p>We always appreciate hearing from you. Whether it is with a question about our
+  <p>contact us <a href="https://rmhcsouthafrica.org/contact/">tel number</a></p>
   <p>FAQ <a href="https://rmhcsouthafrica.org/faq/">FAQ</a></p>
   <p><a href="rmhcadmin@rmhcsouthafrica.org">rmchadimin@southafrica</a></p>
   <p><a href="https://rmhcsouthafrica.org/privacy-policy/">privacypolicy</a></p>
              <!-- social media platforms are also used -->
-   <p><a href="https://www.facebook.com/profile.php?id=61577145423066">facebook</a></p>
-   <p><a href="https://www.instagram.com/rmhcsouthafrica/">instagram</a></p>
-   <p><a href="https://www.youtube.com/channel/UC22h9jaqYZO2PwjFaBDaCFQ">youtube</a></p>
-   <p><a href="https://www.linkedin.com/in/rmhcsouthafrica/">linkedin</a></p>
+    <h4>Follow Us</h4>
+    <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=61577145423066">Facebook</a></li>
+        <li><a href="https://www.instagram.com/rmhcsouthafrica/">Instagram</a></li>
+        <li><a href="https://www.youtube.com/channel/UC22h9jaqYZO2PwjFaBDaCFQ">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/rmhcsouthafrica/">LinkedIn</a></li>
+     </ul>         
+   <!--Trademark Notice
+   <p><small>Trademark Notice: The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</small></p>
+   -->
 </footer>
 
 </body>
