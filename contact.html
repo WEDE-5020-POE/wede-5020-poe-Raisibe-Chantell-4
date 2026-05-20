@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us- RMHC South Africa</title>
 </head>
-<header>We always appreciate hearing from you</header>
-<p>Whether it is with a question about our programs or feedback on our site.
+<section>
+    <h1>We always appreciate hearing from you</h1>
+    <p>Whether it is with a question about our programs or feedback on our site.
  
-If you want to volunteer, donate goods or services on a local level or find information please contact us.</p>
+    If you want to volunteer, donate goods or services on a local level or find information please contact us.</p>
+</section>
 <body>
    <h2>Contact Forms</h2>
+   <!-- form uses HTML5 validation. Replace "/action_page.php" with your bakend later-->
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br><br>
+<form action="#" method="post">
+  <label for="fname">First Name:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+  <label for="lname">Last Name:</label><br>
+  <input type="text" id="lname" name="lname" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
   <input type="submit" value="Submit">
 </form>
+</section>
 
-<!DOCTYPE html>
-<html>
+<!-- The location of map-->
   <h2>The location of RMHC</h2>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28590021.951202694!2d5.755215660781184!3d-28.987580990530198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95732fffeb4b8b%3A0x1278a41dfc63a9a1!2sRMHC!5e0!3m2!1sen!2sza!4v1776693820859!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
