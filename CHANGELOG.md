@@ -52,6 +52,14 @@ Sematic html structure with header and main
  ### fixed - 2026-05-20
  -fixed invalid HTML- REMOVED br and h3 from iside table
  -corrected table colums 
- -contact.html structure, donate. html
+ -contact.html structure, donate. html, and aboutus.html
  -footer
  -made user exprience easy
+ ## [3.0.0] 2026-05-20
+ -Created external stylesheet style.css for styling 
+ -linked stylesheetsheet to all html pages using <link rel="stylesheet">
+ -
+
+
+# CHANGED
+-
