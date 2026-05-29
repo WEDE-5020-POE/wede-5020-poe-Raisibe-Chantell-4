@@ -36,7 +36,7 @@ GOAL-OBJECTIVE-KPI TO MEASURE SUCCESS
 
 ## Sitemap
 
-![Website Sitemap] ![my site map](<img/Mysite map.png>)() <br> (The one here is only an example, include your own site map)
+![Website Sitemap] ![my site map](<img/My-SiteMap.png>)() <br> (The one here is only an example, include your own site map)
 
 ## Referece
  RMHC SOUTH AFRICA,2024, Homepage.[ONLINE]. Available at https://rmhcsouthafrica.org/ > [ACCESSED 7 APRIL 2026]
