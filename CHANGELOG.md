@@ -29,7 +29,8 @@ Example: 2.1.3
 - PATCH → Bug fixes / small improvements (1.0.0 → 1.0.1)
 
 
-PART 2 FEEDBACK
+PART 2 
+FEEDBACK
 ### Fixed
 Valid HTML tags only :Removed 
 type="monetary"
@@ -87,5 +88,12 @@ Sematic html structure with header and main
 - Used background-size: cover and background-position: center for responsive images
 
 
-# CHANGED
+## [2.6] - 2026-05-29
+### Fixed - Style Guide page
+- Added meta charset UTF-8 and viewport meta tag for mobile responsiveness
+- Linked Google Fonts Poppins 700 + Open Sans 400 via CDN
+- Added Font Awesome CDN script for icon display
+- Applied RMHC Red #DA291C to h3 headings and Charcoal #2D2D2D to body text
+- Documented font usage: Poppins for headings, Open Sans for body
+- Documented icon usage with Font Awesome class names
 -
