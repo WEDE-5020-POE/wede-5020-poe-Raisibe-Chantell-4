@@ -67,7 +67,7 @@ Responsive website for Ronald McDonald House Charities South Africa. Built with 
 Based on code in `/css/styles.css` and HTML pages:
 
 **Design & UX:**
-- RMHC brand colors:Yellow `#FFC72C`, Charcoal `#2D2D2D`, Soft Grey `#F5F5F5`, blue, black, purple, white  
+- RMHC brand colors:Yellow , Charcoal `#2D2D2D`, Soft Grey `#F5F5F5`, blue, black, purple, white  
 - Full-bleed background images on hero/about/programs sections using `background-image`
 - CSS Grid for 3-column program cards, collapses to 1 column on mobile
 - `rgba(255,255,255,0.95)` semi-transparent cards for readability over images
@@ -81,7 +81,7 @@ Based on code in `/css/styles.css` and HTML pages:
 
 **Navigation:**
 - RMHC rainbow and purple background, white text, underlines
-- Hover state: RMHC Yellow `#FFC72C` background
+- Hover state: RMHC Yellow, rainbow, purple background
 - `.active` class with darker white + yellow bottom border for current page
 - Touch-friendly full-width links on mobile
 
@@ -96,9 +96,6 @@ Based on code in `/css/styles.css` and HTML pages:
 
 ## Referece
 APHANE, R.C ST105007551 2026.*styles.css*[CSS stylesheet].Available at: css/styles.css [ Accessed 29 May 2026]
-
 W3Schools. 2026. *CSS Flexbox*. Available at: https://www.w3schools.com/ css_flexbox.asp [Accced 29 May 2026]
-
-
 Google Fonts. 2024. *Poppins and Open Sans*. Available at: https://fonts.google.com/specimen/Poppins [Accessed 29 May 2026]
 
