@@ -41,8 +41,5 @@ Based on code in `/css/styles.css` and HTML pages:
 
 ## Referece
 APHANE, R.C ST105007551 2026.*styles.css*[CSS stylesheet].Available at: css/styles.css [ Accessed 29 May 2026]
-
 W3Schools. 2026. *CSS Flexbox*. Available at: https://www.w3schools.com/ css_flexbox.asp [Accced 29 May 2026]
-
-
 Google Fonts. 2024. *Poppins and Open Sans*. Available at: https://fonts.google.com/specimen/Poppins [Accessed 29 May 2026]
