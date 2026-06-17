@@ -28,17 +28,32 @@
    <h2>Contact Forms</h2>
    <!-- form uses HTML5 validation. Replace "/action_page.php" with your bakend later-->
 
-<form action="#" method="post">
-  <label for="fname">First Name:</label><br>
-  <input type="text" id="fname" name="fname" required><br>
-  <label for="lname">Last Name:</label><br>
-  <input type="text" id="lname" name="lname" required><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br>
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-  <input type="submit" value="Submit">
+<form id="contactForm" novalidate>
+  <label for="cName">First Name:</label><br>
+  <input type="text" id="cName" name="name" required><br>
+  <span class="error" id="cNameErr"></span><br>
+
+  <label for="cEmail">Email:</label><br>
+  <input type="email" id="cEmail" name="email" required><br>
+  <span class="error" id="cEmailErr"></span><br>
+
+  <label for="msgType">Message Type:</label><br>
+  <select id="msgType" name="type" required>
+    <option value="">Select type</option>
+    <option value="general">General Query</option>
+    <option value="feedback">Feedback</option>
+  </select><br>
+  <span class="error" id="cTypeErr"></span><br>
+
+  <label for="cMessage">Message:</label><br>
+  <textarea id="cMessage" name="message" rows="6" required minlength="10"></textarea><br>
+  <span class="error" id="cMsgErr"></span><br>
+
+  <button type="submit" id="submitBtn">Send Message</button>
+  <div id="formStatus"></div>
 </form>
+
+
 </section>
 
 <!-- The location of map-->
@@ -46,6 +61,7 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28590021.951202694!2d5.755215660781184!3d-28.987580990530198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95732fffeb4b8b%3A0x1278a41dfc63a9a1!2sRMHC!5e0!3m2!1sen!2sza!4v1776693820859!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!--The above is Google Maps iframe -->
+
 
 </body>
 </html>
@@ -73,7 +89,7 @@
 </footer>  
 
 <p>©RMHC — The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</p>
-</body>
-      </html>
+<script src="script.js"></script>
+
 </body>
 </html>
