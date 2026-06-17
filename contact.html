@@ -28,31 +28,113 @@
    <h2>Contact Forms</h2>
    <!-- form uses HTML5 validation. Replace "/action_page.php" with your bakend later-->
 
-<form id="contactForm" novalidate>
-  <label for="cName">First Name:</label><br>
-  <input type="text" id="cName" name="name" required><br>
-  <span class="error" id="cNameErr"></span><br>
+<section class="contact-section">
+  <div class="contact-hub">
+    <h1>Contact Ronald McDonald House Charities SA</h1>
+    <p>Supporting families with children in hospital. We typically respond within 24 hours.</p>
+    
+    <div class="contact-cards">
+      <div class="card">
+        <h3>Urgent Family Support</h3>
+        <p>Need accommodation near the hospital? Use the form below.</p>
+        <a href="#contactForm" class="btn">Contact Form</a>
+      </div>
+      
+  <form id="contactForm" novalidate>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="cName">Your Full Name*</label>
+        <input type="text" id="cName" name="name" required>
+        <span class="error" id="cNameErr"></span>
+      </div>
+      
+      <div class="form-group">
+        <label for="cEmail">Your Email*</label>
+        <input type="email" id="cEmail" name="email" required>
+        <span class="error" id="cEmailErr"></span>
+      </div>
+    </div>
 
-  <label for="cEmail">Email:</label><br>
-  <input type="email" id="cEmail" name="email" required><br>
-  <span class="error" id="cEmailErr"></span><br>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="cPhone">Phone Number</label>
+        <input type="tel" id="cPhone" name="phone" placeholder="082 123 4567">
+        <span class="error" id="cPhoneErr"></span>
+      </div>
+      
+      <div class="form-group">
+        <label for="childAge">Child's Age</label>
+        <input type="number" id="childAge" name="child_age" min="0" max="18" placeholder="e.g. 7">
+        <span class="error" id="childAgeErr"></span>
+      </div>
+    </div>
 
-  <label for="msgType">Message Type:</label><br>
-  <select id="msgType" name="type" required>
-    <option value="">Select type</option>
-    <option value="general">General Query</option>
-    <option value="feedback">Feedback</option>
-  </select><br>
-  <span class="error" id="cTypeErr"></span><br>
+    <div class="form-group">
+      <label for="hospital">Hospital Name</label>
+      <input type="text" id="hospital" name="hospital" placeholder="e.g. Red Cross War Memorial Children's Hospital">
+      <span class="error" id="hospitalErr"></span>
+    </div>
 
-  <label for="cMessage">Message:</label><br>
-  <textarea id="cMessage" name="message" rows="6" required minlength="10"></textarea><br>
-  <span class="error" id="cMsgErr"></span><br>
+    <div class="form-group">
+      <label for="cSubject">Subject*</label>
+      <input type="text" id="cSubject" name="subject" required placeholder="e.g. Accommodation needed for 3 nights">
+      <span class="error" id="cSubjectErr"></span>
+    </div>
 
-  <button type="submit" id="submitBtn">Send Message</button>
-  <div id="formStatus"></div>
-</form>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="msgType">Reason for Contact*</label>
+        <select id="msgType" name="type" required>
+          <option value="">Select reason</option>
+          <option value="accommodation">Family Accommodation Query</option>
+          <option value="emergency">Emergency Accommodation</option>
+          <option value="volunteer">Volunteer Opportunities</option>
+          <option value="donate">Donation Information</option>
+          <option value="media">Media Enquiry</option>
+          <option value="general">General Query</option>
+        </select>
+        <span class="error" id="cTypeErr"></span>
+      </div>
 
+      <div class="form-group">
+        <label for="contactTime">Preferred Contact Time</label>
+        <select id="contactTime" name="contact_time">
+          <option value="">Any time</option>
+          <option value="morning">Morning 8am-12pm</option>
+          <option value="afternoon">Afternoon 12pm-5pm</option>
+          <option value="evening">Evening 5pm-8pm</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cReferral">How did you hear about RMHC?</label>
+      <select id="cReferral" name="referral">
+        <option value="">Select option</option>
+        <option value="hospital">Hospital Social Worker</option>
+        <option value="doctor">Doctor/Nurse</option>
+        <option value="social">Social Media</option>
+        <option value="friend">Friend/Family</option>
+        <option value="website">Website Search</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cMessage">Message*</label>
+      <textarea id="cMessage" name="message" rows="6" required minlength="10" 
+        placeholder="Please include dates needed, number of family members, and any special requirements"></textarea>
+      <span class="error" id="cMsgErr"></span>
+    </div>
+
+    <button type="submit" id="submitBtn">Send Message to RMHC</button>
+    <div id="formStatus"></div>
+  </form>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
 
 </section>
 
@@ -64,6 +146,8 @@
 
 
 </body>
+
+
 </html>
 
  <footer>
@@ -74,7 +158,8 @@
   <p>FAQ <a href="https://rmhcsouthafrica.org/faq/">FAQ</a></p>
   <p><a href="rmhcadmin@rmhcsouthafrica.org">rmchadimin@southafrica</a></p>
   <p><a href="https://rmhcsouthafrica.org/privacy-policy/">privacypolicy</a></p>
-             <!-- social media platforms are also used -->
+       
+      <!-- social media platforms are also used -->
     <h4>Follow Us</h4>
     <ul>
         <li><a href="https://www.facebook.com/profile.php?id=61577145423066">Facebook</a></li>
