@@ -217,7 +217,7 @@ nav li:last-child a {
 }
 form {
     max-width: 600px;
-    background-color: rgb(0, 162, 255);
+    background-color: rgb(199, 43, 147);
     padding: 20px;
     border-radius: 5px;
     margin: 0 auto;
@@ -376,4 +376,27 @@ form {
 }
 input, textarea {
     width: 100%;
+}
+.contact-section { max-width: 900px; margin: 0 auto; padding: 20px; }
+.contact-hub { text-align: center; margin-bottom: 40px; }
+.contact-cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 30px 0; }
+.card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; width: 260px; background: #f9f9f9; }
+.card h3 { color: #8f355b; margin-top: 0; font-size: 1.1rem; }
+.btn { display: inline-block; background: #291c1b; color: white; padding: 10px 15px; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+.btn:hover { background: #b14f85; }
+
+.form-row { display: flex; gap: 20px; }
+.form-group { flex: 1; margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+.form-group input, .form-group select, .form-group textarea { 
+  width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+.error { color: #DA291C; font-size: 0.9rem; display: block; min-height: 18px; }
+.success { color: #155724; background: #d4edda; padding: 10px; border-radius: 4px; }
+#submitBtn { background: #DA291C; color: white; padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+#submitBtn:disabled { background: #ccc; }
+
+@media (max-width: 768px) {
+  .form-row { flex-direction: column; gap: 0; }
+  .contact-cards { flex-direction: column; align-items: center; }
 }
