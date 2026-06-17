@@ -18,52 +18,76 @@
                 <li><a href="Product and Services.html">Products and Services</a></li>
             </ul>
         </nav>
-<!-- This is where you enter your personal inforation -->
+<!-- This is where you enter your personal information -->
+  <main>
+<section class="contact-section">
+  <h1>General Enquiry - Ronald McDonald House Charities</h1>
+  <p>Questions about volunteering, donations, partnerships, or our programs? Send us a message.</p>
+  <p><strong>For urgent family accommodation, please use our <a href="contact.html">Contact Form</a> or call 021 404 5500</strong></p>
 
-<h1>Enquiry form</h1>
-<!-- This is where you enter your personal inforation -->
-<p>Whether it is with a question about our programs or feedback on our site.</p>
-<!-- Form: methods=POST sends data securely -->
-<form action="/action_page.php" method="POST">
+  <form id="enquiryForm" novalidate>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="eFname">First Name*</label>
+        <input type="text" id="eFname" name="first_name" required>
+        <span class="error" id="eFnameErr"></span>
+      </div>
+      
+      <div class="form-group">
+        <label for="eSurname">Surname*</label>
+        <input type="text" id="eSurname" name="surname" required>
+        <span class="error" id="eSurnameErr"></span>
+      </div>
+    </div>
 
-  <!-- first name input with correct label-for and id matching -->
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" required><br><br>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="eEmail">Email Address*</label>
+        <input type="email" id="eEmail" name="email" required>
+        <span class="error" id="eEmailErr"></span>
+      </div>
+      
+      <div class="form-group">
+        <label for="ePhone">Phone Number</label>
+        <input type="tel" id="ePhone" name="phone" placeholder="082 123 4567">
+        <span class="error" id="ePhoneErr"></span>
+      </div>
+    </div>
 
-  <!-- surname input with correct label-for and id matching -->
-  <label for="surname">Surname:</label><br>
-  <input type="text" id="surname" name="surname" required><br><br>
+    <div class="form-group">
+      <label for="eType">Enquiry Type*</label>
+      <select id="eType" name="enquiry_type" required>
+        <option value="">Select enquiry type</option>
+        <option value="volunteer">Volunteering with RMHC</option>
+        <option value="donate">Donation Information</option>
+        <option value="corporate">Corporate Partnership</option>
+        <option value="events">Fundraising Events</option>
+        <option value="media">Media Enquiry</option>
+        <option value="general">General Question</option>
+      </select>
+      <span class="error" id="eTypeErr"></span>
+    </div>
 
-  <!-- email input with correct label-for and id matching -->
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+    <div class="form-group">
+      <label for="eSubject">Subject*</label>
+      <input type="text" id="eSubject" name="subject" required placeholder="e.g. Corporate volunteer day">
+      <span class="error" id="eSubjectErr"></span>
+    </div>
 
-  <!-- phone number input with correct label-for and id matching -->
-  <label for="cdetails">Contact details:</label><br>
-  <input type="text" id="cdetails" name="cdetails" required><br><br>
+    <div class="form-group">
+      <label for="eMessage">Your Message*</label>
+      <textarea id="eMessage" name="message" rows="6" required minlength="10" 
+        placeholder="Please provide details about your enquiry"></textarea>
+      <span class="error" id="eMsgErr"></span>
+    </div>
 
-   <!-- dropdown relaceses invalid type="moneytary" input-->
-  <label for="Volunteer">How would you like to volunteer?</label><br>
-  <select id="Volunteer" name="Volunteer">
-    
-    <!-- options for volunteering -->
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select><br><br>
-  <label for="Time">Time:</label><br>
-  <input type="time" id="Time" name="Time" value=""><br><br>
+    <button type="submit" id="enquiryBtn">Submit Enquiry</button>
+    <div id="enquiryStatus"></div>
+  </form>
+</section>
+</main>
 
-  <label for="Comment">message:</label><br>
-  <input type="comment" id="comment" name="comment" value=""><br>
-  
-  <!-- submit button to send form data -->
-  <input type="submit" value="Submit">
-
-  <!-- reset button to clear form data -->
-  <input type="reset" value="Reset">
-</form>
-
-  <!-- Footer section with contact information -->
+<!-- Footer section with contact information -->
  <footer>
     <hr>
     <h3>Contact Us</h3>
@@ -73,6 +97,7 @@
   <p><a href="rmhcadmin@rmhcsouthafrica.org">rmchadimin@southafrica</a></p>
   <p><a href="https://rmhcsouthafrica.org/privacy-policy/">privacypolicy</a></p>
              <!-- social media platforms are also used -->
+
     <h4>Follow Us</h4>
     <ul>
         <li><a href="https://www.facebook.com/profile.php?id=61577145423066">Facebook</a></li>
@@ -88,6 +113,6 @@
 
 <p>©RMHC — The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</p>
 </body>
-      </html>
+      <script src="js/script.js"></script>
 </body>
 </html>
