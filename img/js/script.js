@@ -1,128 +1,148 @@
-// WEDE5020 Part 3 - AJAX Volunteer Form Submission
-const volunteerForm = document.getElementById('volunteerForm');
+console.log("JS Connected");
 
-if (volunteerForm) {
-  volunteerForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
     
-    const submitBtn = document.getElementById('volunteerBtn');
-    const status = document.getElementById('volunteerStatus');
-    let valid = true;
-    
-    // Clear old errors
-    document.querySelectorAll('#volunteerForm .error').forEach(el => el.textContent = '');
-    
-    // Get values
-    const fname = document.getElementById('vFname').value.trim();
-    const sname = document.getElementById('vSname').value.trim();
-    const email = document.getElementById('vEmail').value.trim();
-    const phone = document.getElementById('vPhone').value.trim();
-    const role = document.getElementById('vRole').value;
-    const time = document.getElementById('vTime').value;
-    const comment = document.getElementById('vComment').value.trim();
-    
-    // Validation
-    if (fname === '') { document.getElementById('vFnameErr').textContent = 'First name required'; valid = false; }
-    if (sname === '') { document.getElementById('vSnameErr').textContent = 'Surname required'; valid = false; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { 
-      document.getElementById('vEmailErr').textContent = 'Valid email required'; valid = false; 
-    }
-    if (!/^0[6-8][0-9]{8}$/.test(phone.replace(/\s/g, ''))) { 
-      document.getElementById('vPhoneErr').textContent = 'Enter valid SA number: 0821234567'; valid = false; 
-    }
-    if (role === '') { document.getElementById('vRoleErr').textContent = 'Select a volunteer role'; valid = false; }
-    if (time === '') { document.getElementById('vTimeErr').textContent = 'Select availability'; valid = false; }
-    if (comment.length < 20) { 
-      document.getElementById('vCommentErr').textContent = 'Please write at least 20 characters'; valid = false; 
-    }
-    
-    if (!valid) return;
-    
-    // Submit via AJAX
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Submitting...';
-    status.innerHTML = '';
-    
-    const formData = new FormData(this);
-    
-    try {
-      // Create a NEW form on Formspree for volunteers
-      const response = await fetch('https://formspree.io/f/YOUR_VOLUNTEER_ENDPOINT', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-      
-      if (response.ok) {
-        status.innerHTML = '<p class="success">Thank you! Your volunteer application was sent. RMHC will contact you within 3 business days.</p>';
-        this.reset();
-      } else {
-        status.innerHTML = '<p class="error">Error sending application. Please try again.</p>';
-      }
-    } catch (error) {
-      status.innerHTML = '<p class="error">Network error. Check your connection.</p>';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit Volunteer Application';
-    }
- // WEDE5020 Part 3 - AJAX Enquiry Form Submission
-const enquiryForm = document.getElementById('enquiryForm');
+    // VOLUNTEER FORM - about.html
+    const volunteerForm = document.getElementById('volunteerForm');
+    if (volunteerForm) {
+        console.log("Volunteer form found");
+        volunteerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            document.querySelectorAll('#volunteerForm .error').forEach(span => span.textContent = '');
 
-if (enquiryForm) {
-  enquiryForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const submitBtn = document.getElementById('enquiryBtn');
-    const status = document.getElementById('enquiryStatus');
-    let valid = true;
-    
-    document.querySelectorAll('#enquiryForm .error').forEach(el => el.textContent = '');
-    
-    const fname = document.getElementById('eFname').value.trim();
-    const surname = document.getElementById('eSurname').value.trim();
-    const email = document.getElementById('eEmail').value.trim();
-    const phone = document.getElementById('ePhone').value.trim();
-    const type = document.getElementById('eType').value;
-    const subject = document.getElementById('eSubject').value.trim();
-    const msg = document.getElementById('eMessage').value.trim();
-    
-    if (fname === '') { document.getElementById('eFnameErr').textContent = 'First name required'; valid = false; }
-    if (surname === '') { document.getElementById('eSurnameErr').textContent = 'Surname required'; valid = false; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('eEmailErr').textContent = 'Valid email required'; valid = false; }
-    if (phone !== '' && !/^0[6-8][0-9]{8}$/.test(phone.replace(/\s/g, ''))) { 
-      document.getElementById('ePhoneErr').textContent = 'Enter valid SA number'; valid = false; 
+            const fname = document.getElementById('vFname');
+            const sname = document.getElementById('vSname');
+            const email = document.getElementById('vEmail');
+            const phone = document.getElementById('vPhone');
+            const age = document.getElementById('vAge');
+            const role = document.getElementById('vRole');
+            const time = document.getElementById('vTime');
+            const hours = document.getElementById('vHours');
+
+            if (fname.value.trim() === '') {
+                document.getElementById('vFnameErr').textContent = 'First name is required';
+                isValid = false;
+            }
+            if (sname.value.trim() === '') {
+                document.getElementById('vSnameErr').textContent = 'Surname is required';
+                isValid = false;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                document.getElementById('vEmailErr').textContent = 'Enter a valid email';
+                isValid = false;
+            }
+            if (!/^(\+27|0)[6-8][0-9]{8}$/.test(phone.value.replace(/\s/g, ''))) {
+                document.getElementById('vPhoneErr').textContent = 'Enter valid SA number: 0821234567';
+                isValid = false;
+            }
+            if (age.value < 16 || age.value > 80 || age.value === '') {
+                document.getElementById('vAgeErr').textContent = 'Age must be 16-80';
+                isValid = false;
+            }
+            if (role.value === '') {
+                document.getElementById('vRoleErr').textContent = 'Please select a role';
+                isValid = false;
+            }
+            if (time.value === '') {
+                document.getElementById('vTimeErr').textContent = 'Please select availability';
+                isValid = false;
+            }
+            if (hours.value < 1 || hours.value > 40 || hours.value === '') {
+                document.getElementById('vHoursErr').textContent = 'Hours must be 1-40';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Thank you for volunteering! We will contact you soon.');
+                volunteerForm.reset();
+            }
+        });
     }
-    if (type === '') { document.getElementById('eTypeErr').textContent = 'Select enquiry type'; valid = false; }
-    if (subject === '') { document.getElementById('eSubjectErr').textContent = 'Subject required'; valid = false; }
-    if (msg.length < 10) { document.getElementById('eMsgErr').textContent = 'Message must be at least 10 characters'; valid = false; }
-    
-    if (!valid) return;
-    
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    status.innerHTML = '';
-    
-    const formData = new FormData(this);
-    
-    try {
-      const response = await fetch('https://formspree.io/f/YOUR_ENQUIRY_ENDPOINT', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-      
-      if (response.ok) {
-        status.innerHTML = '<p class="success">Thank you! Your enquiry has been sent. RMHC will respond within 2 business days.</p>';
-        this.reset();
-      } else {
-        status.innerHTML = '<p class="error">Error sending enquiry. Please try again.</p>';
-      }
-    } catch (error) {
-      status.innerHTML = '<p class="error">Network error. Please check your connection.</p>';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit Enquiry';
+
+    // ENQUIRY FORM - enquiry.html
+    const enquiryForm = document.getElementById('enquiryForm');
+    if (enquiryForm) {
+        console.log("Enquiry form found");
+        enquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            document.querySelectorAll('#enquiryForm .error').forEach(span => span.textContent = '');
+
+            const name = document.getElementById('eName');
+            const email = document.getElementById('eEmail');
+            const phone = document.getElementById('ePhone');
+            const type = document.getElementById('eType');
+            const message = document.getElementById('eMessage');
+
+            if (name.value.trim() === '') {
+                document.getElementById('eNameErr').textContent = 'Name is required';
+                isValid = false;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                document.getElementById('eEmailErr').textContent = 'Enter a valid email';
+                isValid = false;
+            }
+            if (phone.value !== '' && !/^(\+27|0)[6-8][0-9]{8}$/.test(phone.value.replace(/\s/g, ''))) {
+                document.getElementById('ePhoneErr').textContent = 'Enter valid SA number or leave blank';
+                isValid = false;
+            }
+            if (type.value === '') {
+                document.getElementById('eTypeErr').textContent = 'Please select enquiry type';
+                isValid = false;
+            }
+            if (message.value.trim().length < 10) {
+                document.getElementById('eMessageErr').textContent = 'Message must be 10+ characters';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Enquiry sent! We will reply within 24 hours.');
+                enquiryForm.reset();
+            }
+        });
     }
-  });
-} });
-}
+
+    // CONTACT FORM - contact.html
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        console.log("Contact form found");
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            document.querySelectorAll('#contactForm .error').forEach(span => span.textContent = '');
+
+            const name = document.getElementById('cName');
+            const email = document.getElementById('cEmail');
+            const subject = document.getElementById('cSubject');
+            const urgency = document.getElementById('cUrgency');
+            const message = document.getElementById('cMessage');
+
+            if (name.value.trim() === '') {
+                document.getElementById('cNameErr').textContent = 'Name is required';
+                isValid = false;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                document.getElementById('cEmailErr').textContent = 'Enter a valid email';
+                isValid = false;
+            }
+            if (subject.value.trim() === '') {
+                document.getElementById('cSubjectErr').textContent = 'Subject is required';
+                isValid = false;
+            }
+            if (urgency.value === '') {
+                document.getElementById('cUrgencyErr').textContent = 'Please select urgency level';
+                isValid = false;
+            }
+            if (message.value.trim() === '') {
+                document.getElementById('cMessageErr').textContent = 'Message is required';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Message sent! Thank you for contacting us.');
+                contactForm.reset();
+            }
+        });
+    }
+});
