@@ -44,8 +44,6 @@
   <h3>OUR VISION</h3>
   <p>A world where every child has the chance to heal and every family has the support they need.</p>
   </section>
-  
-
 
   <section>
   <h4>OUR VALUES</h4>
@@ -55,27 +53,83 @@
   <p>Innovation: We continuously seek new and creative ways to improve our services and support for families, embracing change and adapting to the evolving needs of our communities.</p>
   </section>
 
-  <h5> Volunteer Form</h5>
-  <!-- form uses html5 validation-->
-   <form action="/action_page.php">
-  <label for="fname">First name:</label><br>  
-  <input type="text" id="fname" name="fname" value="" required><br>
-  <label for="Sname">Surname name:</label><br>
-  <input type="text" id="srname" name="surname" value="" required><br>
-  <label for="Email">Email:</label><br> 
-  <input type="email" id="Emal" name="Email" value="" required><br>
-  <label for="cdetails">Contact details:</label><br>
-  <input type="text" id="Contact details" name="Contact details" value="" required><br>
-  <label for="Volunteer">Volunteer:</label><br>
-  <input type="text" id="moneytary" name="moneytary" value="" required><br>
-  <label for="Time">Time:</label><br>
-  <input type="text" id="Time" name="Time" value="" required><br>
-  <label for="Comment">Comment:</label><br>
-  <input type="text" id="Comment" name="Comment" value="" required><br> 
-  <br>
-  <input type="submit" value="Submit">
-  </section>
+  <section>
+<h5>Volunteer Application Form - RMHC South Africa</h5>
+<p>Join our family of volunteers helping families with sick children. We'll contact you within 3 business days.</p>
+
+<form id="volunteerForm" novalidate>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="vFname">First Name*</label>
+      <input type="text" id="vFname" name="first_name" required>
+      <span class="error" id="vFnameErr"></span>
+    </div>
+    
+    <div class="form-group">
+      <label for="vSname">Surname*</label>
+      <input type="text" id="vSname" name="surname" required>
+      <span class="error" id="vSnameErr"></span>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="vEmail">Email Address*</label>
+      <input type="email" id="vEmail" name="email" required>
+      <span class="error" id="vEmailErr"></span>
+    </div>
+    
+    <div class="form-group">
+      <label for="vPhone">Phone Number*</label>
+      <input type="tel" id="vPhone" name="phone" required placeholder="082 123 4567">
+      <span class="error" id="vPhoneErr"></span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="vRole">Preferred Volunteer Role*</label>
+    <select id="vRole" name="volunteer_role" required>
+      <option value="">Select a role</option>
+      <option value="house">House Volunteer - Cook, clean, support families</option>
+      <option value="events">Events Volunteer - Fundraising & awareness</option>
+      <option value="admin">Admin Volunteer - Office support</option>
+      <option value="driver">Driver - Transport families</option>
+      <option value="corporate">Corporate Group Volunteering</option>
+    </select>
+    <span class="error" id="vRoleErr"></span>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="vTime">Availability*</label>
+      <select id="vTime" name="availability" required>
+        <option value="">Select availability</option>
+        <option value="weekday">Weekdays</option>
+        <option value="weekend">Weekends</option>
+        <option value="evening">Evenings</option>
+        <option value="flexible">Flexible</option>
+      </select>
+      <span class="error" id="vTimeErr"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="vHours">Hours per Month</label>
+      <input type="number" id="vHours" name="hours_monthly" min="1" max="160" placeholder="e.g. 8">
+      <span class="error" id="vHoursErr"></span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="vComment">Why do you want to volunteer with RMHC?*</label>
+    <textarea id="vComment" name="motivation" rows="4" required minlength="20" 
+      placeholder="Tell us about your motivation to help families"></textarea>
+    <span class="error" id="vCommentErr"></span>
+  </div>
+
+  <button type="submit" id="volunteerBtn">Submit Volunteer Application</button>
+  <div id="volunteerStatus"></div>
 </form>
+  </section>
 </main>
 
 <!--footer with contactand social information-->
@@ -101,7 +155,9 @@
 </footer>
 <p>©RMHC — The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</p>
 </body>
-      </html>
+      <script src="script.js"></script>
+</body>
+</html>
 
 
 </body>
