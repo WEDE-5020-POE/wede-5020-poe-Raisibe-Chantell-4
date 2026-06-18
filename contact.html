@@ -6,6 +6,7 @@
     <title>Contact Us- RMHC South Africa</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
  <!--main  navigation menu- fixedstructure with ul inside nav -->
         <nav>
             <ul>
@@ -28,108 +29,71 @@
    <h2>Contact Forms</h2>
    <!-- form uses HTML5 validation. Replace "/action_page.php" with your bakend later-->
 
-<section class="contact-section">
-  <div class="contact-hub">
-    <h1>Contact Ronald McDonald House Charities SA</h1>
-    <p>Supporting families with children in hospital. We typically respond within 24 hours.</p>
-    
-    <div class="contact-cards">
-      <div class="card">
-        <h3>Urgent Family Support</h3>
-        <p>Need accommodation near the hospital? Use the form below.</p>
-        <a href="#contactForm" class="btn">Contact Form</a>
-      </div>
-      
+<section>
   <form id="contactForm" novalidate>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="cName">Your Full Name*</label>
-        <input type="text" id="cName" name="name" required>
+    <h2>Contact Us</h2>
+
+    <div class="form-group">
+        <label for="cName">Full Name*</label>
+        <input type="text" id="cName" required>
         <span class="error" id="cNameErr"></span>
-      </div>
-      
-      <div class="form-group">
-        <label for="cEmail">Your Email*</label>
-        <input type="email" id="cEmail" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="cEmail">Email Address*</label>
+        <input type="email" id="cEmail" required>
         <span class="error" id="cEmailErr"></span>
-      </div>
     </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="cPhone">Phone Number</label>
-        <input type="tel" id="cPhone" name="phone" placeholder="082 123 4567">
-        <span class="error" id="cPhoneErr"></span>
-      </div>
-      
-      <div class="form-group">
-        <label for="childAge">Child's Age</label>
-        <input type="number" id="childAge" name="child_age" min="0" max="18" placeholder="e.g. 7">
-        <span class="error" id="childAgeErr"></span>
-      </div>
-    </div>
-
     <div class="form-group">
-      <label for="hospital">Hospital Name</label>
-      <input type="text" id="hospital" name="hospital" placeholder="e.g. Red Cross War Memorial Children's Hospital">
-      <span class="error" id="hospitalErr"></span>
+        <label for="cPhone">Contact Number</label>
+        <input type="tel" id="cPhone">
     </div>
-
     <div class="form-group">
-      <label for="cSubject">Subject*</label>
-      <input type="text" id="cSubject" name="subject" required placeholder="e.g. Accommodation needed for 3 nights">
-      <span class="error" id="cSubjectErr"></span>
+        <label for="cSubject">Subject*</label>
+        <input type="text" id="cSubject" required>
+        <span class="error" id="cSubjectErr"></span>
     </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="msgType">Reason for Contact*</label>
-        <select id="msgType" name="type" required>
-          <option value="">Select reason</option>
-          <option value="accommodation">Family Accommodation Query</option>
-          <option value="emergency">Emergency Accommodation</option>
-          <option value="volunteer">Volunteer Opportunities</option>
-          <option value="donate">Donation Information</option>
-          <option value="media">Media Enquiry</option>
-          <option value="general">General Query</option>
+    <div class="form-group">
+        <label for="cDept">Department*</label>
+        <select id="cDept" required>
+            <option value="">-- Select Department --</option>
+            <option value="General">General Enquiries</option>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Donations">Donations</option>
+            <option value="Family Support">Family Support</option>
         </select>
-        <span class="error" id="cTypeErr"></span>
-      </div>
-
-      <div class="form-group">
-        <label for="contactTime">Preferred Contact Time</label>
-        <select id="contactTime" name="contact_time">
-          <option value="">Any time</option>
-          <option value="morning">Morning 8am-12pm</option>
-          <option value="afternoon">Afternoon 12pm-5pm</option>
-          <option value="evening">Evening 5pm-8pm</option>
+        <span class="error" id="cDeptErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cUrgency">Urgency Level*</label>
+        <select id="cUrgency" required>
+            <option value="">-- Select --</option>
+            <option value="Low">Low - General query</option>
+            <option value="Medium">Medium - Reply within 3 days</option>
+            <option value="High">High - Urgent, reply in 24hrs</option>
         </select>
-      </div>
+        <span class="error" id="cUrgencyErr"></span>
     </div>
-
     <div class="form-group">
-      <label for="cReferral">How did you hear about RMHC?</label>
-      <select id="cReferral" name="referral">
-        <option value="">Select option</option>
-        <option value="hospital">Hospital Social Worker</option>
-        <option value="doctor">Doctor/Nurse</option>
-        <option value="social">Social Media</option>
-        <option value="friend">Friend/Family</option>
-        <option value="website">Website Search</option>
-        <option value="other">Other</option>
-      </select>
+        <label for="cMessage">Message*</label>
+        <textarea id="cMessage" rows="6" required></textarea>
+        <span class="error" id="cMessageErr"></span>
     </div>
-
     <div class="form-group">
-      <label for="cMessage">Message*</label>
-      <textarea id="cMessage" name="message" rows="6" required minlength="10" 
-        placeholder="Please include dates needed, number of family members, and any special requirements"></textarea>
-      <span class="error" id="cMsgErr"></span>
+        <input type="checkbox" id="cConsent" required>
+        <label for="cConsent">I consent to having this website store my submitted information so they can respond to my inquiry.</label>
+        <span class="error" id="cConsentErr"></span>
     </div>
-
-    <button type="submit" id="submitBtn">Send Message to RMHC</button>
-    <div id="formStatus"></div>
+    <div class="form-group">
+        <input type="checkbox" id="cSubscribe">
+        <label for="cSubscribe">Subscribe to our newsletter</label>
+    </div>
+    <div class="form-group">
+        <label for="cFile">Attach a file (optional)</label>
+        <input type="file" id="cFile" accept=".jpg,.jpeg,.png,.pdf">
+    </div>
   </form>
+    <button type="submit">Send Message</button>
+</form>
 </section>
 
 <!-- The location of map-->
@@ -162,7 +126,6 @@
     </footer>
     <p>©RMHC — The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</p>
 
-<script src="script.js"></script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
