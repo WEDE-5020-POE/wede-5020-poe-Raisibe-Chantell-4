@@ -31,7 +31,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enquiry Form - RMHC SA</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -40,70 +40,57 @@
   <p>Questions about volunteering, donations, partnerships, or our programs? Send us a message.</p>
   <p><strong>For urgent family accommodation, please use our <a href="contact.html">Contact Form</a> or call 021 404 5500</strong></p>
 
-  <form id="enquiryForm" novalidate>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="eFname">First Name*</label>
-        <input type="text" id="eFname" name="first_name" required>
-        <span class="error" id="eFnameErr"></span>
-      </div>
-      
-      <div class="form-group">
-        <label for="eSurname">Surname*</label>
-        <input type="text" id="eSurname" name="surname" required>
-        <span class="error" id="eSurnameErr"></span>
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="eEmail">Email Address*</label>
-        <input type="email" id="eEmail" name="email" required>
-        <span class="error" id="eEmailErr"></span>
-      </div>
-      
-      <div class="form-group">
-        <label for="ePhone">Phone Number</label>
-        <input type="tel" id="ePhone" name="phone" placeholder="082 123 4567">
-        <span class="error" id="ePhoneErr"></span>
-      </div>
-    </div>
+ <form id="contactForm" novalidate>
+    <h2>Contact Us</h2>
 
     <div class="form-group">
-      <label for="eType">Enquiry Type*</label>
-      <select id="eType" name="enquiry_type" required>
-        <option value="">Select enquiry type</option>
-        <option value="volunteer">Volunteering with RMHC</option>
-        <option value="donate">Donation Information</option>
-        <option value="corporate">Corporate Partnership</option>
-        <option value="events">Fundraising Events</option>
-        <option value="media">Media Enquiry</option>
-        <option value="general">General Question</option>
-      </select>
-      <span class="error" id="eTypeErr"></span>
+        <label for="cName">Full Name*</label>
+        <input type="text" id="cName" required>
+        <span class="error" id="cNameErr"></span>
     </div>
-
     <div class="form-group">
-      <label for="eSubject">Subject*</label>
-      <input type="text" id="eSubject" name="subject" required placeholder="e.g. Corporate volunteer day">
-      <span class="error" id="eSubjectErr"></span>
+        <label for="cEmail">Email Address*</label>
+        <input type="email" id="cEmail" required>
+        <span class="error" id="cEmailErr"></span>
     </div>
-
     <div class="form-group">
-      <label for="eMessage">Your Message*</label>
-      <textarea id="eMessage" name="message" rows="6" required minlength="10" 
-        placeholder="Please provide details about your enquiry"></textarea>
-      <span class="error" id="eMsgErr"></span>
+        <label for="cPhone">Contact Number</label>
+        <input type="tel" id="cPhone">
+    </div>
+    <div class="form-group">
+        <label for="cSubject">Subject*</label>
+        <input type="text" id="cSubject" required>
+        <span class="error" id="cSubjectErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cDept">Department*</label>
+        <select id="cDept" required>
+            <option value="">-- Select Department --</option>
+            <option value="General">General Enquiries</option>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Donations">Donations</option>
+            <option value="Family Support">Family Support</option>
+        </select>
+        <span class="error" id="cDeptErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cUrgency">Urgency Level*</label>
+        <select id="cUrgency" required>
+            <option value="">-- Select --</option>
+            <option value="Low">Low - General query</option>
+            <option value="Medium">Medium - Reply within 3 days</option>
+            <option value="High">High - Urgent, reply in 24hrs</option>
+        </select>
+        <span class="error" id="cUrgencyErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cMessage">Message*</label>
+        <textarea id="cMessage" rows="6" required></textarea>
+        <span class="error" id="cMessageErr"></span>
     </div>
 
-    <button type="submit" id="enquiryBtn">Submit Enquiry</button>
-    <div id="enquiryStatus"></div>
-  </form>
-</section>
-
-<script src="js/script.js"></script>
-</body>
-</html>
+    <button type="submit">Send Message</button>
+</form> 
 </main>
 
 <!-- Footer section with contact information -->
@@ -131,7 +118,8 @@
 </footer>  
 
 <p>©RMHC — The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</p>
+
+<script src="script.js"></script>
 </body>
-      <script src="js/script.js"></script>
-</body>
+
 </html>
