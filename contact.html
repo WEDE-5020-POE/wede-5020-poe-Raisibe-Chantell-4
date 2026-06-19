@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us- RMHC South Africa</title>
+    <title>Contact Us | Ronald McDonald House Charities South Africa</title>
+    <meta name="description" content="We are here to support families and answer your questions. Contact us for accommodation, volunteering, donations, or general enquiries.">
+    <meta name="keywords" content="contact RMHC South Africa, accommodation enquiry, volunteer contact, donation contact, family support contact">
     <link rel="stylesheet" href="style.css">
+</head>
+
 </head>
 
  <!--main  navigation menu- fixedstructure with ul inside nav -->
@@ -25,61 +29,141 @@
  
     If you want to volunteer, donate goods or services on a local level or find information please contact us.</p>
 </section>
+<!-- INTERACTIVE MAP -->
+<section class="map-section">
+    <h2>Find Us</h2>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+</section>
+
+<!-- Leaflet CSS - Add this in <head> of contact.html -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Leaflet JS - Add this BEFORE your script.js at bottom of body -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <body>
    <h2>Contact Forms</h2>
    <!-- form uses HTML5 validation. Replace "/action_page.php" with your bakend later-->
 
 <section>
-<form id="contactForm" novalidate>    
+<form id="contactForm" novalidate>
+
     <h2>Contact Us</h2>
+    <p>We are here to support families and answer your questions.</p>
+
+    <!-- Personal Details -->
+    <div class="form-group">
+        <label for="cFname">First Name*</label>
+        <input type="text" id="cFname"
+               placeholder="Enter your first name" required>
+        <span class="error" id="cFnameErr"></span>
+    </div>
 
     <div class="form-group">
-        <label for="cName">Full Name*</label>
-        <input type="text" id="cName" required>
-        <span class="error" id="cNameErr"></span>
+        <label for="cSname">Surname*</label>
+        <input type="text" id="cSname"
+               placeholder="Enter your surname" required>
+        <span class="error" id="cSnameErr"></span>
     </div>
+
     <div class="form-group">
         <label for="cEmail">Email Address*</label>
-        <input type="email" id="cEmail" required>
+        <input type="email" id="cEmail"
+               placeholder="example@gmail.com" required>
         <span class="error" id="cEmailErr"></span>
     </div>
+
     <div class="form-group">
-        <label for="cPhone">Contact Number</label>
-        <input type="tel" id="cPhone">
+        <label for="cPhone">Contact Number*</label>
+        <input type="tel" id="cPhone"
+               placeholder="0821234567" required>
+        <span class="error" id="cPhoneErr"></span>
     </div>
+
+    <!-- Hospital Information -->
+    <div class="form-group">
+        <label for="cHospital">Hospital*</label>
+        <select id="cHospital" required>
+            <option value="">-- Select Hospital --</option>
+            <option value="Chris Hani Baragwanath Hospital">
+                Chris Hani Baragwanath Hospital
+            </option>
+            <option value="Charlotte Maxeke Johannesburg Academic Hospital">
+                Charlotte Maxeke Johannesburg Academic Hospital
+            </option>
+            <option value="Nelson Mandela Children's Hospital">
+                Nelson Mandela Children's Hospital
+            </option>
+            <option value="Red Cross War Memorial Children's Hospital">
+                Red Cross War Memorial Children's Hospital
+            </option>
+            <option value="Other">Other</option>
+        </select>
+        <span class="error" id="cHospitalErr"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="cAccommodation">Accommodation Needed?</label>
+        <select id="cAccommodation">
+            <option value="">-- Select Option --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Need More Information">
+                Need More Information
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="cTime">Preferred Contact Time</label>
+        <select id="cTime">
+            <option value="">-- Select Time --</option>
+            <option value="Morning">Morning (08:00-12:00)</option>
+            <option value="Afternoon">Afternoon (12:00-17:00)</option>
+            <option value="Evening">Evening (17:00-20:00)</option>
+        </select>
+    </div>
+
+    <!-- Enquiry Details -->
     <div class="form-group">
         <label for="cSubject">Subject*</label>
-        <input type="text" id="cSubject" required>
+        <input type="text" id="cSubject"
+               placeholder="Example: Accommodation enquiry"
+               required>
         <span class="error" id="cSubjectErr"></span>
     </div>
+
     <div class="form-group">
         <label for="cDept">Department*</label>
         <select id="cDept" required>
             <option value="">-- Select Department --</option>
             <option value="General">General Enquiries</option>
             <option value="Volunteering">Volunteering</option>
-            <option value="Donations">Donations</option>
+            <option value="Donations">Donations & Sponsorship</option>
             <option value="Family Support">Family Support</option>
         </select>
         <span class="error" id="cDeptErr"></span>
     </div>
+
     <div class="form-group">
         <label for="cUrgency">Urgency Level*</label>
         <select id="cUrgency" required>
-            <option value="">-- Select --</option>
-            <option value="Low">Low - General query</option>
-            <option value="Medium">Medium - Reply within 3 days</option>
-            <option value="High">High - Urgent, reply in 24hrs</option>
+            <option value="">-- Select Level --</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
         </select>
         <span class="error" id="cUrgencyErr"></span>
     </div>
+
     <div class="form-group">
         <label for="cMessage">Message*</label>
-        <textarea id="cMessage" rows="6" required></textarea>
+        <textarea id="cMessage" rows="6"
+                  placeholder="Please tell us how we can assist you..."
+                  required></textarea>
         <span class="error" id="cMessageErr"></span>
     </div>
 
     <button type="submit">Send Message</button>
+
 </form>
 
   </section>
