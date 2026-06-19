@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourusername.github.io/index.html</loc>
+    <loc>https://chantell-ramsibe.github.io/index.html</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/about.html</loc>
+    <loc>https://chantell-ramsibe.github.io/about.html</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/contact.html</loc>
+    <loc>https://chantell-ramsibe.github.io/services.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chantell-ramsibe.github.io/contact.html</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/enquiry.html</loc>
+    <loc>https://chantell-ramsibe.github.io/enquiry.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chantell-ramsibe.github.io/volunteer.html</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.7</priority>
   </url>
