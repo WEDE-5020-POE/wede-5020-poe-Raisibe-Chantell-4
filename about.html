@@ -58,76 +58,105 @@
 <p>Join our family of volunteers helping families with sick children. We'll contact you within 3 business days.</p>
 
 <form id="volunteerForm" novalidate>
-  <div class="form-row">
-    <div class="form-group">
-      <label for="vFname">First Name*</label>
-      <input type="text" id="vFname" name="first_name" required>
-      <span class="error" id="vFnameErr"></span>
-    </div>
-    
-    <div class="form-group">
-      <label for="vSname">Surname*</label>
-      <input type="text" id="vSname" name="surname" required>
-      <span class="error" id="vSnameErr"></span>
-    </div>
-  </div>
+    <h2>Volunteer Application Form</h2>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="vEmail">Email Address*</label>
-      <input type="email" id="vEmail" name="email" required>
-      <span class="error" id="vEmailErr"></span>
-    </div>
-    
-    <div class="form-group">
-      <label for="vPhone">Phone Number*</label>
-      <input type="tel" id="vPhone" name="phone" required placeholder="082 123 4567">
-      <span class="error" id="vPhoneErr"></span>
-    </div>
-  </div>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <div class="form-group">
+            <label for="vFname">First Name*</label>
+            <input type="text" id="vFname" required>
+            <span class="error" id="vFnameErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vSname">Surname*</label>
+            <input type="text" id="vSname" required>
+            <span class="error" id="vSnameErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vID">ID Number*</label>
+            <input type="text" id="vID" placeholder="0000000000000" required>
+            <span class="error" id="vIDErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vAge">Age*</label>
+            <input type="number" id="vAge" min="16" max="80" required>
+            <span class="error" id="vAgeErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vGender">Gender*</label>
+            <select id="vGender" required>
+                <option value="">-- Select --</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Prefer not to say</option>
+            </select>
+            <span class="error" id="vGenderErr"></span>
+        </div>
+    </fieldset>
 
-  <div class="form-group">
-    <label for="vRole">Preferred Volunteer Role*</label>
-    <select id="vRole" name="volunteer_role" required>
-      <option value="">Select a role</option>
-      <option value="house">House Volunteer - Cook, clean, support families</option>
-      <option value="events">Events Volunteer - Fundraising & awareness</option>
-      <option value="admin">Admin Volunteer - Office support</option>
-      <option value="driver">Driver - Transport families</option>
-      <option value="corporate">Corporate Group Volunteering</option>
-    </select>
-    <span class="error" id="vRoleErr"></span>
-  </div>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <div class="form-group">
+            <label for="vEmail">Email Address*</label>
+            <input type="email" id="vEmail" required>
+            <span class="error" id="vEmailErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vPhone">Phone Number*</label>
+            <input type="tel" id="vPhone" placeholder="0821234567" required>
+            <span class="error" id="vPhoneErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vAddress">Physical Address*</label>
+            <textarea id="vAddress" rows="2" required></textarea>
+            <span class="error" id="vAddressErr"></span>
+        </div>
+    </fieldset>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="vTime">Availability*</label>
-      <select id="vTime" name="availability" required>
-        <option value="">Select availability</option>
-        <option value="weekday">Weekdays</option>
-        <option value="weekend">Weekends</option>
-        <option value="evening">Evenings</option>
-        <option value="flexible">Flexible</option>
-      </select>
-      <span class="error" id="vTimeErr"></span>
-    </div>
+    <fieldset>
+        <legend>Volunteer Preferences</legend>
+        <div class="form-group">
+            <label for="vRole">Preferred Role*</label>
+            <select id="vRole" required>
+                <option value="">-- Select Role --</option>
+                <option value="Kitchen Helper">Kitchen Helper</option>
+                <option value="House Assistant">House Assistant</option>
+                <option value="Event Support">Event Support</option>
+                <option value="Admin Support">Admin Support</option>
+                <option value="Fundraising">Fundraising</option>
+                <option value="Driver">Driver</option>
+            </select>
+            <span class="error" id="vRoleErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vTime">Availability*</label>
+            <select id="vTime" required>
+                <option value="">-- Select Availability --</option>
+                <option value="Weekday Mornings">Weekday Mornings</option>
+                <option value="Weekday Afternoons">Weekday Afternoons</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Evenings">Evenings</option>
+                <option value="Flexible">Flexible</option>
+            </select>
+            <span class="error" id="vTimeErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vHours">Hours per Week*</label>
+            <input type="number" id="vHours" min="1" max="40" required>
+            <span class="error" id="vHoursErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vStart">When can you start?*</label>
+            <input type="date" id="vStart" required>
+            <span class="error" id="vStartErr"></span>
+        </div>
+        <div class="form-group">
+            <label for="vExp">Relevant Skills/Experience</label>
+            <textarea id="vExp" rows="4" placeholder="e.g. First Aid, Cooking, Driving License"></textarea>
+        </div>
+    </fieldset>
 
-    <div class="form-group">
-      <label for="vHours">Hours per Month</label>
-      <input type="number" id="vHours" name="hours_monthly" min="1" max="160" placeholder="e.g. 8">
-      <span class="error" id="vHoursErr"></span>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="vComment">Why do you want to volunteer with RMHC?*</label>
-    <textarea id="vComment" name="motivation" rows="4" required minlength="20" 
-      placeholder="Tell us about your motivation to help families"></textarea>
-    <span class="error" id="vCommentErr"></span>
-  </div>
-
-  <button type="submit" id="volunteerBtn">Submit Volunteer Application</button>
-  <div id="volunteerStatus"></div>
+    <button type="submit">Submit Application</button>
 </form>
   </section>
 </main>
@@ -155,7 +184,8 @@
 </footer>
 <p>©RMHC — The following trademarks used herein are owned by McDonalds Corporation and its affiliates; McDonalds, Ronald McDonald House™ Charities, Ronald McDonald House™ Charities Logo, RMHC, Ronald McDonald House™, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.</p>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </body>
 </html>
