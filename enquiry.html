@@ -40,56 +40,59 @@
   <p>Questions about volunteering, donations, partnerships, or our programs? Send us a message.</p>
   <p><strong>For urgent family accommodation, please use our <a href="contact.html">Contact Form</a> or call 021 404 5500</strong></p>
 
- <form id="contactForm" novalidate>
-    <h2>Contact Us</h2>
+ <form id="enquiryForm" novalidate>
+    <h2>General Enquiry Form</h2>
 
     <div class="form-group">
-        <label for="cName">Full Name*</label>
-        <input type="text" id="cName" required>
-        <span class="error" id="cNameErr"></span>
+        <label for="eName">Full Name*</label>
+        <input type="text" id="eName" required>
+        <span class="error" id="eNameErr"></span>
     </div>
     <div class="form-group">
-        <label for="cEmail">Email Address*</label>
-        <input type="email" id="cEmail" required>
-        <span class="error" id="cEmailErr"></span>
+        <label for="eCompany">Company/Organization</label>
+        <input type="text" id="eCompany">
     </div>
     <div class="form-group">
-        <label for="cPhone">Contact Number</label>
-        <input type="tel" id="cPhone">
+        <label for="eEmail">Email Address*</label>
+        <input type="email" id="eEmail" required>
+        <span class="error" id="eEmailErr"></span>
     </div>
     <div class="form-group">
-        <label for="cSubject">Subject*</label>
-        <input type="text" id="cSubject" required>
-        <span class="error" id="cSubjectErr"></span>
+        <label for="ePhone">Phone Number</label>
+        <input type="tel" id="ePhone" placeholder="0821234567">
+        <span class="error" id="ePhoneErr"></span>
     </div>
     <div class="form-group">
-        <label for="cDept">Department*</label>
-        <select id="cDept" required>
-            <option value="">-- Select Department --</option>
-            <option value="General">General Enquiries</option>
-            <option value="Volunteering">Volunteering</option>
-            <option value="Donations">Donations</option>
-            <option value="Family Support">Family Support</option>
+        <label for="eType">Enquiry Type*</label>
+        <select id="eType" required>
+            <option value="">-- Select Type --</option>
+            <option value="Donations">Donations & Sponsorship</option>
+            <option value="Partnerships">Corporate Partnerships</option>
+            <option value="Media">Media & Press</option>
+            <option value="Services">Services for Families</option>
+            <option value="Careers">Careers</option>
+            <option value="Other">Other</option>
         </select>
-        <span class="error" id="cDeptErr"></span>
+        <span class="error" id="eTypeErr"></span>
     </div>
     <div class="form-group">
-        <label for="cUrgency">Urgency Level*</label>
-        <select id="cUrgency" required>
+        <label for="eRef">How did you hear about us?</label>
+        <select id="eRef">
             <option value="">-- Select --</option>
-            <option value="Low">Low - General query</option>
-            <option value="Medium">Medium - Reply within 3 days</option>
-            <option value="High">High - Urgent, reply in 24hrs</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Friend/Family">Friend/Family</option>
+            <option value="Website">Website</option>
+            <option value="Event">Event</option>
+            <option value="News">News Article</option>
         </select>
-        <span class="error" id="cUrgencyErr"></span>
     </div>
     <div class="form-group">
-        <label for="cMessage">Message*</label>
-        <textarea id="cMessage" rows="6" required></textarea>
-        <span class="error" id="cMessageErr"></span>
+        <label for="eMessage">Your Message*</label>
+        <textarea id="eMessage" rows="6" required placeholder="Minimum 10 characters"></textarea>
+        <span class="error" id="eMessageErr"></span>
     </div>
 
-    <button type="submit">Send Message</button>
+    <button type="submit">Send Enquiry</button>
 </form> 
 </main>
 
