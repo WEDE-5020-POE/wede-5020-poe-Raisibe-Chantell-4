@@ -97,3 +97,46 @@ Sematic html structure with header and main
 - Documented font usage: Poppins for headings, Open Sans for body
 - Documented icon usage with Font Awesome class names
 -
+
+PART 3 
+JAVASRIPT
+## [3.1.1] - 2026-06-15
+
+### Fixed
+- Fixed contact form on `contact.html`, `volunteer.html`, `enquiry.html` - Added missing `method="POST"` attribute to `<form>` tag and `type="submit"` to `<button>`. Form can now be submitted
+- Fixed form accessibility - Added matching `for` attributes to `<label>` tags and `id` attributes to all `<input>`, `<select>`, and `<textarea>` elements
+- Fixed HTML validation errors - Removed invalid elements and corrected nesting in all forms for WEDE5020 POE Part 2 compliance
+
+### Added
+- Added `novalidate` attribute to all forms to enable custom JavaScript validation from `script.js`
+- Added `required` attribute to name, email, subject, and message fields for client-side validation
+- Added page-specific dropdown options for `volunteer.html` and `enquiry.html` to improve user experience and data collection
+- Added `<div class="form-group">` wrappers for consistent CSS styling across all forms
+
+### Changed
+- Changed form headings to match page context: "Get In Touch" on contact, "Volunteer With RMHC SA" on volunteer, "Accommodation Enquiry" on enquiry
+- Updated submit button text from generic "Submit" to "Send Message" for better UX
+## [3.1.1] - 2026-06-18
+
+### Fixed
+- Fixed contact forms on `contact.html`, `volunteer.html`, `enquiry.html` - Added missing `method="POST"` and `type="submit"` to button. Form can now be submitted
+- Fixed form labels: Added matching `for` and `id` attributes for accessibility and WEDE5020 POE Part 2 compliance
+
+### Added
+- Added `novalidate` attribute to forms to allow custom JavaScript validation in `script.js`
+- Added specific dropdown options for Volunteer and Enquiry pages to improve user experience
+## [3.2.1] - 2026-06-19
+
+### Added
+- Implemented **Social Media Integration** for Off-Page SEO - Added social share buttons linking to RMHC SA Facebook, Instagram, LinkedIn on all pages
+- Added **Local SEO Implementation** - Embedded Google Maps iframe with exact RMHC Johannesburg coordinates `-26.186, 27.903` on `contact.html`
+- Added **Backlink Strategy** documented in POE Word Doc Part 3.2 - Identified partnerships with Chris Hani Baragwanath Hospital, local NGOs, and news sites
+- Added Open Graph meta tags for Facebook/LinkedIn previews: `og:title`, `og:description`, `og:image` in `<head>` of all pages
+- Added `rel="noopener noreferrer"` to all external links for security and SEO
+
+### Changed
+- Updated `contact.html` to include NAP data for Local SEO - Added full Name, Address, Phone in footer matching Google Business Profile
+- Changed footer to include clickable `tel:` and `mailto:` links for improved user experience and Local SEO signals
+
+### Fixed
+- Fixed missing Local SEO elements - Added structured address data and embedded map to improve Google Maps ranking for "Ronald McDonald House Johannesburg"
