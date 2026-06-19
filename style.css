@@ -445,3 +445,131 @@ button {
 button:hover {
     background: #b71c1c;
 }
+/* ===== ACCORDION STYLES ===== */
+.faq-section { margin: 40px 0; }
+.accordion-item { border: 1px solid #ddd; margin-bottom: 8px; border-radius: 4px; }
+.accordion-header {
+    background-color: #c62828;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.accordion-header:hover, .accordion-header.active {
+    background-color: #b71c1c;
+}
+.accordion-header::after {
+    content: '\002B';
+    float: right;
+    font-weight: bold;
+}
+.accordion-header.active::after {
+    content: "\2212";
+}
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.accordion-content p { padding: 15px 0; }
+
+/* ===== MODAL STYLES ===== */
+.modal-btn {
+    background: #2e7d32;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: transform 0.2s ease;
+}
+.modal-btn:hover { transform: scale(1.05); }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    animation: fadeIn 0.3s;
+}
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    animation: slideIn 0.3s;
+}
+@keyframes slideIn { from {transform: translateY(-50px);} to {transform: translateY(0);} }
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal:hover { color: #000; }
+
+/* ===== LIGHTBOX GALLERY ===== */
+.gallery { display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0; }
+.gallery-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    animation: zoom 0.3s;
+}
+@keyframes zoom { from {transform: scale(0);} to {transform: scale(1);} }
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* ===== MAP STYLES ===== */
+.map-section { margin: 40px 0; }
+#map { border-radius: 8px; border: 2px solid #ddd; }
