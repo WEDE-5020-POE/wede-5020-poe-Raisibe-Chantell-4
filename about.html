@@ -57,109 +57,60 @@
 <h5>Volunteer Application Form - RMHC South Africa</h5>
 <p>Join our family of volunteers helping families with sick children. We'll contact you within 3 business days.</p>
 
-<form id="volunteerForm" novalidate>
-    <h2>Volunteer Application Form</h2>
-
-    <fieldset>
-        <legend>Personal Details</legend>
-        <div class="form-group">
-            <label for="vFname">First Name*</label>
-            <input type="text" id="vFname" required>
-            <span class="error" id="vFnameErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vSname">Surname*</label>
-            <input type="text" id="vSname" required>
-            <span class="error" id="vSnameErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vID">ID Number*</label>
-            <input type="text" id="vID" placeholder="0000000000000" required>
-            <span class="error" id="vIDErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vAge">Age*</label>
-            <input type="number" id="vAge" min="16" max="80" required>
-            <span class="error" id="vAgeErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vGender">Gender*</label>
-            <select id="vGender" required>
-                <option value="">-- Select --</option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Other">Prefer not to say</option>
-            </select>
-            <span class="error" id="vGenderErr"></span>
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <legend>Contact Information</legend>
-        <div class="form-group">
-            <label for="vEmail">Email Address*</label>
-            <input type="email" id="vEmail" required>
-            <span class="error" id="vEmailErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vPhone">Phone Number*</label>
-            <input type="tel" id="vPhone" placeholder="0821234567" required>
-            <span class="error" id="vPhoneErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vAddress">Physical Address*</label>
-            <textarea id="vAddress" rows="2" required></textarea>
-            <span class="error" id="vAddressErr"></span>
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <legend>Volunteer Preferences</legend>
-        <div class="form-group">
-            <label for="vRole">Preferred Role*</label>
-            <select id="vRole" required>
-                <option value="">-- Select Role --</option>
-                <option value="Kitchen Helper">Kitchen Helper</option>
-                <option value="House Assistant">House Assistant</option>
-                <option value="Event Support">Event Support</option>
-                <option value="Admin Support">Admin Support</option>
-                <option value="Fundraising">Fundraising</option>
-                <option value="Driver">Driver</option>
-            </select>
-            <span class="error" id="vRoleErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vTime">Availability*</label>
-            <select id="vTime" required>
-                <option value="">-- Select Availability --</option>
-                <option value="Weekday Mornings">Weekday Mornings</option>
-                <option value="Weekday Afternoons">Weekday Afternoons</option>
-                <option value="Weekends">Weekends</option>
-                <option value="Evenings">Evenings</option>
-                <option value="Flexible">Flexible</option>
-            </select>
-            <span class="error" id="vTimeErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vHours">Hours per Week*</label>
-            <input type="number" id="vHours" min="1" max="40" required>
-            <span class="error" id="vHoursErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vStart">When can you start?*</label>
-            <input type="date" id="vStart" required>
-            <span class="error" id="vStartErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="vExp">Relevant Skills/Experience</label>
-            <textarea id="vExp" rows="4" placeholder="e.g. First Aid, Cooking, Driving License"></textarea>
-        </div>
-    </fieldset>
-
-    <button type="submit">Submit Application</button>
-</form>
   </section>
 </main>
+<form id="contactForm" novalidate>
+    <h2>Contact Us</h2>
+
+    <div class="form-group">
+        <label for="cName">Full Name*</label>
+        <input type="text" id="cName" required>
+        <span class="error" id="cNameErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cEmail">Email Address*</label>
+        <input type="email" id="cEmail" required>
+        <span class="error" id="cEmailErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cPhone">Contact Number</label>
+        <input type="tel" id="cPhone">
+    </div>
+    <div class="form-group">
+        <label for="cSubject">Subject*</label>
+        <input type="text" id="cSubject" required>
+        <span class="error" id="cSubjectErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cDept">Department*</label>
+        <select id="cDept" required>
+            <option value="">-- Select Department --</option>
+            <option value="General">General Enquiries</option>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Donations">Donations</option>
+            <option value="Family Support">Family Support</option>
+        </select>
+        <span class="error" id="cDeptErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cUrgency">Urgency Level*</label>
+        <select id="cUrgency" required>
+            <option value="">-- Select --</option>
+            <option value="Low">Low - General query</option>
+            <option value="Medium">Medium - Reply within 3 days</option>
+            <option value="High">High - Urgent, reply in 24hrs</option>
+        </select>
+        <span class="error" id="cUrgencyErr"></span>
+    </div>
+    <div class="form-group">
+        <label for="cMessage">Message*</label>
+        <textarea id="cMessage" rows="6" required></textarea>
+        <span class="error" id="cMessageErr"></span>
+    </div>
+
+    <button type="submit">Send Message</button>
+</form>
+
 
 <!--footer with contactand social information-->
 <footer>
