@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://yourusername.github.io/sitemap.xml
+Sitemap: https://github.com/WEDE-5020-POE/wede-5020-poe-Raisibe-Chantell-4
