@@ -44,68 +44,148 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ENQUIRY FORM
-    const enquiryForm = document.getElementById('enquiryForm');
-    if (enquiryForm) {
-        enquiryForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            let isValid = true;
-            document.querySelectorAll('#enquiryForm.error').forEach(span => span.textContent = '');
+document.addEventListener("DOMContentLoaded", function () {
 
-            if (document.getElementById('eName').value.trim() === '') {
-                document.getElementById('eNameErr').textContent = 'Name is required'; isValid = false;
-            }
-            if (!emailRegex.test(document.getElementById('eEmail').value)) {
-                document.getElementById('eEmailErr').textContent = 'Enter valid email'; isValid = false;
-            }
-            const ePhone = document.getElementById('ePhone').value.replace(/\s/g, '');
-            if (ePhone!== '' &&!phoneRegex.test(ePhone)) {
-                document.getElementById('ePhoneErr').textContent = 'Enter valid SA number or leave blank'; isValid = false;
-            }
-            if (document.getElementById('eType').value === '') {
-                document.getElementById('eTypeErr').textContent = 'Select enquiry type'; isValid = false;
-            }
-            if (document.getElementById('eMessage').value.trim().length < 10) {
-                document.getElementById('eMessageErr').textContent = 'Message must be 10+ characters'; isValid = false;
-            }
+    const enquiryForm = document.getElementById("enquiryForm");
 
-            if (isValid) {
-                alert('Enquiry sent! We will reply within 24 hours.');
-                enquiryForm.reset();
-            }
+    enquiryForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        // Clear previous error messages
+        document.querySelectorAll(".error").forEach(error => {
+            error.textContent = "";
         });
-    }
 
+        let isValid = true;
+
+        // Full Name
+        const name = document.getElementById("eName").value.trim();
+        if (name === "") {
+            document.getElementById("eNameErr").textContent =
+                "Please enter your full name.";
+            isValid = false;
+        }
+
+        // Email Address
+        const email = document.getElementById("eEmail").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            document.getElementById("eEmailErr").textContent =
+                "Please enter a valid email address.";
+            isValid = false;
+        }
+
+        // Phone Number (optional, but if entered must be 10 digits)
+        const phone = document.getElementById("ePhone").value.trim();
+
+        if (phone !== "" && !/^\d{10}$/.test(phone)) {
+            document.getElementById("ePhoneErr").textContent =
+                "Phone number must contain 10 digits.";
+            isValid = false;
+        }
+
+        // Enquiry Type
+        const type = document.getElementById("eType").value;
+
+        if (type === "") {
+            document.getElementById("eTypeErr").textContent =
+                "Please select an enquiry type.";
+            isValid = false;
+        }
+
+        // Message (minimum 10 characters)
+        const message = document.getElementById("eMessage").value.trim();
+
+        if (message.length < 10) {
+            document.getElementById("eMessageErr").textContent =
+                "Message must contain at least 10 characters.";
+            isValid = false;
+        }
+
+        // Success
+        if (isValid) {
+            alert("Your enquiry has been sent successfully!");
+            enquiryForm.reset();
+        }
+
+    });
+
+});
     // CONTACT FORM
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            let isValid = true;
-            document.querySelectorAll('#contactForm.error').forEach(span => span.textContent = '');
+    document.addEventListener("DOMContentLoaded", () => {
 
-            if (document.getElementById('cName').value.trim() === '') {
-                document.getElementById('cNameErr').textContent = 'Name is required'; isValid = false;
-            }
-            if (!emailRegex.test(document.getElementById('cEmail').value)) {
-                document.getElementById('cEmailErr').textContent = 'Enter valid email'; isValid = false;
-            }
-            if (document.getElementById('cSubject').value.trim() === '') {
-                document.getElementById('cSubjectErr').textContent = 'Subject is required'; isValid = false;
-            }
-            if (document.getElementById('cDept').value === '') {
-                document.getElementById('cDeptErr').textContent = 'Select department'; isValid = false;
-            }
-            if (document.getElementById('cUrgency').value === '') {
-                document.getElementById('cUrgencyErr').textContent = 'Select urgency'; isValid = false;
-            }
-            if (document.getElementById('cMessage').value.trim() === '') {
-                document.getElementById('cMessageErr').textContent = 'Message is required'; isValid = false;
-            }
+    const contactForm = document.getElementById("contactForm");
 
-            if (isValid) {
-                alert('Message sent! Thank you for contacting us.');
-                contactForm.reset();
-            }
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        // Clear previous errors
+        document.querySelectorAll(".error").forEach(error => {
+            error.textContent = "";
         });
-    }
+
+        let valid = true;
+
+        // Full Name
+        const name = document.getElementById("cName").value.trim();
+        if (name === "") {
+            document.getElementById("cNameErr").textContent =
+                "Please enter your full name.";
+            valid = false;
+        }
+
+        // Email
+        const email = document.getElementById("cEmail").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            document.getElementById("cEmailErr").textContent =
+                "Please enter a valid email address.";
+            valid = false;
+        }
+
+        // Subject
+        const subject = document.getElementById("cSubject").value.trim();
+        if (subject === "") {
+            document.getElementById("cSubjectErr").textContent =
+                "Please enter a subject.";
+            valid = false;
+        }
+
+        // Department
+        const dept = document.getElementById("cDept").value;
+        if (dept === "") {
+            document.getElementById("cDeptErr").textContent =
+                "Please select a department.";
+            valid = false;
+        }
+
+        // Urgency
+        const urgency = document.getElementById("cUrgency").value;
+        if (urgency === "") {
+            document.getElementById("cUrgencyErr").textContent =
+                "Please select an urgency level.";
+            valid = false;
+        }
+
+        // Message
+        const message = document.getElementById("cMessage").value.trim();
+        if (message === "") {
+            document.getElementById("cMessageErr").textContent =
+                "Please enter your message.";
+            valid = false;
+        }
+
+        // If all fields are valid
+        if (valid) {
+            alert("Your message has been sent successfully!");
+            contactForm.reset();
+        }
+
+    });
+
+});
 }); 
