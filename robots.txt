@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-Sitemap: https://github.com/WEDE-5020-POE/wede-5020-poe-Raisibe-Chantell-4
+Sitemap: https://raisibe-chantell.github.io/wede-5020-poe-Raisibe-Chantell-4/sitemap.xml
