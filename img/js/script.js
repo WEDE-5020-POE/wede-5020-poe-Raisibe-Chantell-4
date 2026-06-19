@@ -1,59 +1,118 @@
+```javascript
 console.log("JS Connected - WEDE5020 POE");
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^(\+27|0)[6-8][0-9]{8}$/;
     const idRegex = /^[0-9]{13}$/;
+}
+```
+// ======================
+// volunteer form
+// ======================
+const contactForm = document.getElementById("contactForm");
 
-    // VOLUNTEER FORM
-    const volunteerForm = document.getElementById('volunteerForm');
-    if (volunteerForm) {
-        volunteerForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            let isValid = true;
-            document.querySelectorAll('#volunteerForm.error').forEach(span => span.textContent = '');
+if (contactForm) {
 
-            const fields = {
-                vFname: { value: document.getElementById('vFname').value.trim(), err: 'vFnameErr', msg: 'First name is required' },
-                vSname: { value: document.getElementById('vSname').value.trim(), err: 'vSnameErr', msg: 'Surname is required' },
-                vID: { value: document.getElementById('vID').value.trim(), err: 'vIDErr', msg: 'Enter 13-digit SA ID', regex: idRegex },
-                vAge: { value: document.getElementById('vAge').value, err: 'vAgeErr', msg: 'Age must be 16-80', min: 16, max: 80 },
-                vGender: { value: document.getElementById('vGender').value, err: 'vGenderErr', msg: 'Select gender' },
-                vEmail: { value: document.getElementById('vEmail').value.trim(), err: 'vEmailErr', msg: 'Enter valid email', regex: emailRegex },
-                vPhone: { value: document.getElementById('vPhone').value.replace(/\s/g, ''), err: 'vPhoneErr', msg: 'Enter valid SA number: 0821234567', regex: phoneRegex },
-                vAddress: { value: document.getElementById('vAddress').value.trim(), err: 'vAddressErr', msg: 'Address is required' },
-                vRole: { value: document.getElementById('vRole').value, err: 'vRoleErr', msg: 'Select a role' },
-                vTime: { value: document.getElementById('vTime').value, err: 'vTimeErr', msg: 'Select availability' },
-                vHours: { value: document.getElementById('vHours').value, err: 'vHoursErr', msg: 'Hours must be 1-40', min: 1, max: 40 },
-                vStart: { value: document.getElementById('vStart').value, err: 'vStartErr', msg: 'Select start date' }
-            };
+    contactForm.addEventListener("submit", function (event) {
 
-            for (const key in fields) {
-                const f = fields[key];
-                if (f.value === '' || (f.regex &&!f.regex.test(f.value)) || (f.min && (f.value < f.min || f.value > f.max))) {
-                    document.getElementById(f.err).textContent = f.msg;
-                    isValid = false;
-                }
-            }
+        event.preventDefault();
 
-            if (isValid) {
-                alert('Volunteer application submitted! We will contact you within 48 hours.');
-                volunteerForm.reset();
-            }
+        // Clear previous errors
+        document.querySelectorAll("#contactForm .error").forEach(error => {
+            error.textContent = "";
         });
-    }
 
-    // ENQUIRY FORM
-document.addEventListener("DOMContentLoaded", function () {
+        let valid = true;
 
-    const enquiryForm = document.getElementById("enquiryForm");
+        // Full Name
+        const name = document.getElementById("cName").value.trim();
+
+        if (name === "") {
+            document.getElementById("cNameErr").textContent =
+                "Please enter your full name.";
+            valid = false;
+        }
+
+        // Email Address
+        const email = document.getElementById("cEmail").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            document.getElementById("cEmailErr").textContent =
+                "Please enter a valid email address.";
+            valid = false;
+        }
+
+        // Contact Number (optional)
+        const phone = document.getElementById("cPhone").value.trim();
+
+        if (phone !== "" && !/^\d{10}$/.test(phone)) {
+            document.getElementById("cPhoneErr").textContent =
+                "Phone number must contain 10 digits.";
+            valid = false;
+        }
+
+        // Subject
+        const subject = document.getElementById("cSubject").value.trim();
+
+        if (subject === "") {
+            document.getElementById("cSubjectErr").textContent =
+                "Please enter a subject.";
+            valid = false;
+        }
+
+        // Department
+        const department = document.getElementById("cDept").value;
+
+        if (department === "") {
+            document.getElementById("cDeptErr").textContent =
+                "Please select a department.";
+            valid = false;
+        }
+
+        // Urgency Level
+        const urgency = document.getElementById("cUrgency").value;
+
+        if (urgency === "") {
+            document.getElementById("cUrgencyErr").textContent =
+                "Please select an urgency level.";
+            valid = false;
+        }
+
+        // Message
+        const message = document.getElementById("cMessage").value.trim();
+
+        if (message.length < 10) {
+            document.getElementById("cMessageErr").textContent =
+                "Message must contain at least 10 characters.";
+            valid = false;
+        }
+
+        // Successful submission
+        if (valid) {
+            alert("Your message has been sent successfully!");
+            contactForm.reset();
+        }
+
+    });
+
+}
+```     
+// ======================
+// ENQUIRY FORM
+// ======================
+const enquiryForm = document.getElementById("enquiryForm");
+
+if (enquiryForm) {
 
     enquiryForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
         // Clear previous error messages
-        document.querySelectorAll(".error").forEach(error => {
+        document.querySelectorAll("#enquiryForm .error").forEach(error => {
             error.textContent = "";
         });
 
@@ -61,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Full Name
         const name = document.getElementById("eName").value.trim();
+
         if (name === "") {
             document.getElementById("eNameErr").textContent =
                 "Please enter your full name.";
@@ -77,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Phone Number (optional, but if entered must be 10 digits)
+        // Phone Number (optional)
         const phone = document.getElementById("ePhone").value.trim();
 
         if (phone !== "" && !/^\d{10}$/.test(phone)) {
@@ -95,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Message (minimum 10 characters)
+        // Message
         const message = document.getElementById("eMessage").value.trim();
 
         if (message.length < 10) {
@@ -104,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // Success
+        // Successful submission
         if (isValid) {
             alert("Your enquiry has been sent successfully!");
             enquiryForm.reset();
@@ -112,18 +172,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-});
-    // CONTACT FORM
-    document.addEventListener("DOMContentLoaded", () => {
+}
+```
 
-    const contactForm = document.getElementById("contactForm");
+
+    
+// ======================
+// CONTACT FORM
+// ======================
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
 
     contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-        // Clear previous errors
-        document.querySelectorAll(".error").forEach(error => {
+        // Clear previous error messages
+        document.querySelectorAll("#contactForm .error").forEach(error => {
             error.textContent = "";
         });
 
@@ -131,13 +197,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Full Name
         const name = document.getElementById("cName").value.trim();
+
         if (name === "") {
             document.getElementById("cNameErr").textContent =
                 "Please enter your full name.";
             valid = false;
         }
 
-        // Email
+        // Email Address
         const email = document.getElementById("cEmail").value.trim();
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -147,8 +214,18 @@ document.addEventListener("DOMContentLoaded", function () {
             valid = false;
         }
 
+        // Contact Number (optional)
+        const phone = document.getElementById("cPhone").value.trim();
+
+        if (phone !== "" && !/^\d{10}$/.test(phone)) {
+            document.getElementById("cPhoneErr").textContent =
+                "Phone number must contain 10 digits.";
+            valid = false;
+        }
+
         // Subject
         const subject = document.getElementById("cSubject").value.trim();
+
         if (subject === "") {
             document.getElementById("cSubjectErr").textContent =
                 "Please enter a subject.";
@@ -156,8 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Department
-        const dept = document.getElementById("cDept").value;
-        if (dept === "") {
+        const department = document.getElementById("cDept").value;
+
+        if (department === "") {
             document.getElementById("cDeptErr").textContent =
                 "Please select a department.";
             valid = false;
@@ -165,6 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Urgency
         const urgency = document.getElementById("cUrgency").value;
+
         if (urgency === "") {
             document.getElementById("cUrgencyErr").textContent =
                 "Please select an urgency level.";
@@ -173,13 +252,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Message
         const message = document.getElementById("cMessage").value.trim();
-        if (message === "") {
+
+        if (message.length < 10) {
             document.getElementById("cMessageErr").textContent =
-                "Please enter your message.";
+                "Message must contain at least 10 characters.";
             valid = false;
         }
 
-        // If all fields are valid
+        // Successful submission
         if (valid) {
             alert("Your message has been sent successfully!");
             contactForm.reset();
@@ -187,5 +267,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-});
-}); 
+}
+```
