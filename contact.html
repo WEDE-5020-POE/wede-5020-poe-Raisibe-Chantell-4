@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Ronald McDonald House Charities South Africa</title>
-    <meta name="description" content="We are here to support families and answer your questions. Contact us for accommodation, volunteering, donations, or general enquiries.">
-    <meta name="keywords" content="contact RMHC South Africa, accommodation enquiry, volunteer contact, donation contact, family support contact">
+    <meta name="description" content="We are here to support families and answer your questions.">
+    <meta name="keywords" content="contact RMHC South Africa, accommodation enquiry">
     <link rel="stylesheet" href="style.css">
-</head>
-
 </head>
 
  <!--main  navigation menu- fixedstructure with ul inside nav -->
@@ -30,19 +30,9 @@
     If you want to volunteer, donate goods or services on a local level or find information please contact us.</p>
 </section>
 <!-- INTERACTIVE MAP -->
-<section class="map-section">
-    <h2>Find Us</h2>
-    <div id="map" style="height: 400px; width: 100%;"></div>
+
 </section>
-
-<!-- Leaflet CSS - Add this in <head> of contact.html -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<!-- Leaflet JS - Add this BEFORE your script.js at bottom of body -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<body>
-   <h2>Contact Forms</h2>
-   <!-- form uses HTML5 validation. Replace "/action_page.php" with your bakend later-->
-
+   
 <section>
 <form id="contactForm" novalidate>
 
@@ -167,13 +157,17 @@
 </form>
 
   </section>
-
-<!-- The location of map-->
-  <h2>The location of RMHC</h2>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28590021.951202694!2d5.755215660781184!3d-28.987580990530198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95732fffeb4b8b%3A0x1278a41dfc63a9a1!2sRMHC!5e0!3m2!1sen!2sza!4v1776693820859!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-<!--The above is Google Maps iframe -->
-
+  <!-- INTERACTIVE MAP USING GOOGLE MAPS -->
+<h2>The location of RMHC</h2>
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.276!2d27.903!3d-26.186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1a8b0b7b0b%3A0x0!2sRonald%20McDonald%20House%20Johannesburg!5e0!3m2!1sen!2sza!4v1718718000000" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
 
 <footer>
     <hr>
