@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enquiry</title>
+    <title>Enquiry Form - RMHC South Africa</title>
     <link rel="stylesheet" href="style.css">
+</head>
 
 </head>
 <!--main  navigation menu- fixedstructure with ul inside nav -->
@@ -40,60 +41,204 @@
   <p>Questions about volunteering, donations, partnerships, or our programs? Send us a message.</p>
   <p><strong>For urgent family accommodation, please use our <a href="contact.html">Contact Form</a> or call 021 404 5500</strong></p>
 
- <form id="enquiryForm" novalidate>
+<form id="enquiryForm" novalidate>
+
     <h2>General Enquiry Form</h2>
 
-    <div class="form-group">
-        <label for="eName">Full Name*</label>
-        <input type="text" id="eName" required>
-        <span class="error" id="eNameErr"></span>
-    </div>
-    <div class="form-group">
-        <label for="eCompany">Company/Organization</label>
-        <input type="text" id="eCompany">
-    </div>
-    <div class="form-group">
-        <label for="eEmail">Email Address*</label>
-        <input type="email" id="eEmail" required>
-        <span class="error" id="eEmailErr"></span>
-    </div>
-    <div class="form-group">
-        <label for="ePhone">Phone Number</label>
-        <input type="tel" id="ePhone" placeholder="0821234567">
-        <span class="error" id="ePhoneErr"></span>
-    </div>
-    <div class="form-group">
-        <label for="eType">Enquiry Type*</label>
-        <select id="eType" required>
-            <option value="">-- Select Type --</option>
-            <option value="Donations">Donations & Sponsorship</option>
-            <option value="Partnerships">Corporate Partnerships</option>
-            <option value="Media">Media & Press</option>
-            <option value="Services">Services for Families</option>
-            <option value="Careers">Careers</option>
-            <option value="Other">Other</option>
-        </select>
-        <span class="error" id="eTypeErr"></span>
-    </div>
-    <div class="form-group">
-        <label for="eRef">How did you hear about us?</label>
-        <select id="eRef">
-            <option value="">-- Select --</option>
-            <option value="Social Media">Social Media</option>
-            <option value="Friend/Family">Friend/Family</option>
-            <option value="Website">Website</option>
-            <option value="Event">Event</option>
-            <option value="News">News Article</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="eMessage">Your Message*</label>
-        <textarea id="eMessage" rows="6" required placeholder="Minimum 10 characters"></textarea>
-        <span class="error" id="eMessageErr"></span>
-    </div>
+    <p>
+        Thank you for contacting Ronald McDonald House Charities South Africa.
+        Please complete the form below and our team will respond as soon as possible.
+    </p>
+
+    <!-- Personal Details -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <div class="form-group">
+            <label for="eFname">First Name*</label>
+            <input type="text" id="eFname"
+                   placeholder="Enter your first name" required>
+            <span class="error" id="eFnameErr"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="eSname">Surname*</label>
+            <input type="text" id="eSname"
+                   placeholder="Enter your surname" required>
+            <span class="error" id="eSnameErr"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="eEmail">Email Address*</label>
+            <input type="email" id="eEmail"
+                   placeholder="example@gmail.com" required>
+            <span class="error" id="eEmailErr"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="ePhone">Phone Number*</label>
+            <input type="tel" id="ePhone"
+                   placeholder="0821234567" required>
+            <span class="error" id="ePhoneErr"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="eProvince">Province*</label>
+            <select id="eProvince" required>
+                <option value="">-- Select Province --</option>
+                <option>Gauteng</option>
+                <option>Western Cape</option>
+                <option>KwaZulu-Natal</option>
+                <option>Eastern Cape</option>
+                <option>Mpumalanga</option>
+                <option>Limpopo</option>
+                <option>North West</option>
+                <option>Free State</option>
+                <option>Northern Cape</option>
+            </select>
+            <span class="error" id="eProvinceErr"></span>
+        </div>
+
+    </fieldset>
+
+    <!-- Enquiry Details -->
+    <fieldset>
+        <legend>Enquiry Details</legend>
+
+        <div class="form-group">
+            <label for="eType">Enquiry Type*</label>
+            <select id="eType" required>
+                <option value="">-- Select Type --</option>
+                <option>Accommodation Information</option>
+                <option>Family Support Services</option>
+                <option>Donations and Sponsorship</option>
+                <option>Volunteer Opportunities</option>
+                <option>Corporate Partnerships</option>
+                <option>Fundraising Events</option>
+                <option>Media and Press</option>
+                <option>Careers</option>
+                <option>General Information</option>
+                <option>Other</option>
+            </select>
+            <span class="error" id="eTypeErr"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="eHospital">Hospital Associated With</label>
+            <select id="eHospital">
+                <option value="">-- Select Hospital --</option>
+                <option>Nelson Mandela Children's Hospital</option>
+                <option>Chris Hani Baragwanath Hospital</option>
+                <option>Charlotte Maxeke Hospital</option>
+                <option>Red Cross Children's Hospital</option>
+                <option>Other Hospital</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="eRef">How did you hear about RMHC?</label>
+            <select id="eRef">
+                <option value="">-- Select Option --</option>
+                <option>Social Media</option>
+                <option>Friend or Family</option>
+                <option>Hospital Staff</option>
+                <option>Website</option>
+                <option>News Article</option>
+                <option>Community Event</option>
+                <option>McDonald's Restaurant</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ePriority">Priority Level*</label>
+            <select id="ePriority" required>
+                <option value="">-- Select Priority --</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Urgent</option>
+            </select>
+            <span class="error" id="ePriorityErr"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="eMessage">Message*</label>
+            <textarea id="eMessage"
+                      rows="6"
+                      placeholder="Please provide details about your enquiry. For example, accommodation needs, family support, volunteering, donations, or partnerships."
+                      required></textarea>
+            <span class="error" id="eMessageErr"></span>
+        </div>
+<div class="form-group">
+    <label for="eRelation">Relationship to Child*</label>
+    <select id="eRelation" required>
+        <option value="">-- Select Relationship --</option>
+        <option>Parent</option>
+        <option>Guardian</option>
+        <option>Grandparent</option>
+        <option>Relative</option>
+        <option>Other</option>
+    </select>
+    <span class="error" id="eRelationErr"></span>
+</div>
+
+<div class="form-group">
+    <label for="eAccommodation">Accommodation Required?</label>
+    <select id="eAccommodation">
+        <option value="">-- Select Option --</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Need More Information</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="eFamilySize">Number of Family Members</label>
+    <input type="number"
+           id="eFamilySize"
+           min="1"
+           max="10"
+           placeholder="Example: 4">
+</div>
+
+<div class="form-group">
+    <label for="eContactMethod">Preferred Contact Method*</label>
+    <select id="eContactMethod" required>
+        <option value="">-- Select Method --</option>
+        <option>Email</option>
+        <option>Phone Call</option>
+        <option>WhatsApp</option>
+    </select>
+    <span class="error" id="eContactMethodErr"></span>
+</div>
+
+<div class="form-group">
+    <label for="eContactTime">Preferred Contact Time</label>
+    <select id="eContactTime">
+        <option value="">-- Select Time --</option>
+        <option>Morning (08:00 - 12:00)</option>
+        <option>Afternoon (12:00 - 17:00)</option>
+        <option>Evening (17:00 - 20:00)</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="eServices">Additional Services Required</label>
+    <select id="eServices">
+        <option value="">-- Select Service --</option>
+        <option>Accommodation Support</option>
+        <option>Family Support</option>
+        <option>Counselling Information</option>
+        <option>Transport Assistance</option>
+        <option>Donation Information</option>
+        <option>Volunteer Information</option>
+    </select>
+</div>
+    </fieldset>
 
     <button type="submit">Send Enquiry</button>
-</form> 
+
+</form>
 </main>
 
 <!-- Footer section with contact information -->
