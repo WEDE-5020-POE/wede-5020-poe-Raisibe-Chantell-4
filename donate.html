@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0.">
-  <title>Donate- RMHC South Africa</title>
-  <link rel="stylesheet" href="style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Ronald McDonald House Charities South Africa</title>
+    <meta name="description" content="RMHC South Africa keeps families together during a child's medical crisis. Learn about our Houses, Family Rooms, and Care Mobile programmes.">
+    <meta name="keywords" content="Ronald McDonald House South Africa, RMHC Johannesburg, families with sick children, paediatric support SA, charity accommodation">
+    <link rel="stylesheet" href="style.css">
+</head>
+
 </head>
 <body>
   <!-- header with navigation for consistency across pages -->
+  <header>
+    <h1>SUPPORT RMHC South Africa</h1>
+    <nav>
+      <ul>
+      <li><a href="index.html">Home</a></li>
+    <meta name="description" content="Learn about our mission to support families in Mbombela. Founded in 2020, we've helped 2,000+ people with food and housing.">
+    <meta name="keywords" content="Mbombela NGO, community support Mpumalanga, volunteer South Africa, charity Mbombela">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
   <header>
     <h1>SUPPORT RMHC South Africa</h1>
     <nav>
@@ -30,19 +45,31 @@
 <h2>Choose your donation type</h2>
 <!-- table for donation options -->
 <table>
-   <tr>
-    <th>One-time Donation</th>
-    <th>Monthly Donation</th>
-    <th>Annual Donation</th>
-    <th>Custom Amount</th>
-   </tr>
-   <tr>
-    <td>ZAR 99.00</td>
-    <td>ZAR 500.00</td>
-    <td>ZAR 1000.00</td>
-    <td>Enter custom amount</td>
-   </tr>
- </table>
+    <tr>
+        <th>One-time Donation</th>
+        <th>Monthly Donation</th>
+        <th>Annual Donation</th>
+        <th>Custom Amount</th>
+    </tr>
+
+    <tr>
+        <td>ZAR 99.00</td>
+        <td>ZAR 500.00</td>
+        <td>ZAR 1000.00</td>
+
+        <td>
+            <input type="number"
+                   id="customAmount"
+                   placeholder="Enter amount"
+                   min="1">
+
+            <button type="button"
+                    onclick="donateCustomAmount()">
+                Donate
+            </button>
+        </td>
+    </tr>
+</table>
 </section>
 
   <!-- link opens in new tab for better user experience -->
